@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <h1>codingage</h1>
+      {/* <h1>codingage</h1> */}
       <ul>
         <li>
           <a href="#intro">소개</a>

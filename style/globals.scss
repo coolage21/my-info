@@ -1,4 +1,6 @@
+@import "./reset";
 @import "./variable";
+@import "./mixin";
 
 /* @import "tailwindcss"; */
 /* :root {
@@ -27,11 +29,11 @@ body {
 } */
 
 body {
-  background-color:rgb(254, 255, 236)
+  
 }
 
 .wrapper {
   width: 1000px;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid lightgray;
 }
