@@ -1,12 +1,12 @@
 import classNames from 'classnames/bind'
-import styles from "./Skills.module.scss";
+import styles from "./History.module.scss";
 
 const cx = classNames.bind(styles);
 
-export default function Skills() {
+export default function History() {
   return (
     <div>
-      Skills
+      History
     </div>
   );
 }

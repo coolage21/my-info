@@ -20,7 +20,7 @@ const config: StorybookConfig = {
     return mergeConfig(config, {
       css: {
         modules: {
-          localsConvention: 'camelCaseOnly',
+          
         },
       },
     });
