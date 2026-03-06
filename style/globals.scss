@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./variable";
+@import "./typography";
 @import "./mixin";
 
 /* @import "tailwindcss"; */
@@ -27,10 +28,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark {
+  --bg-color: #1e1e1e;
+  --text-color: white;
+}
+
+html {
+  font-size: 100%;
+}
 
 body {
-  
+  background: var(--bg-color);
+  color: var(--text-color);
+
 }
+
 
 .wrapper {
   width: 1000px;

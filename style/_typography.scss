@@ -1,0 +1,23 @@
+body {
+  font-size: calc(var(--text-md) * var(--font-scale));
+  line-height: var(--leading-normal);
+}
+
+p {
+  font-size: calc(var(--text-md) * var(--font-scale));
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: calc(var(--text-3xl) * var(--font-scale));
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: calc(var(--text-2xl) * var(--font-scale));
+  line-height: 1.3;
+}
+
+small {
+  font-size: calc(var(--text-sm) * var(--font-scale));
+}

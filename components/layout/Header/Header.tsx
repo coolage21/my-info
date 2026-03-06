@@ -1,3 +1,8 @@
+"use client"
+
+import LanguageSwitcher from '@/components/i18n/LanguageSwitcher'
+import ContrastToggle from '@/components/accessibility/ContrastToggle/ContrastToggle'
+import FontSizeControls from '@/components/accessibility/FontSizeControls/FontSizeControls'
 export default function Header() {
   return (
     <header>
@@ -16,6 +21,11 @@ export default function Header() {
           <a href="#skills">projects</a>
         </li>
       </ul>
+      <LanguageSwitcher/>
+      <ContrastToggle/>
+      <FontSizeControls/>
+      
+      
     </header>
   );
 }
