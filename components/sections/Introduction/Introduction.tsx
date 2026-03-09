@@ -10,9 +10,9 @@ export default function Introduction() {
   
  
   return (
-    <div>
+    <section id="introduction" className={cx('introduction')}>
       Introduction
      {t('title')}
-    </div>
+    </section>
   );
 }

@@ -5,8 +5,8 @@ const cx = classNames.bind(styles);
 
 export default function Skills() {
   return (
-    <div>
+    <section id="skills" className={cx('skills')}>
       Skills
-    </div>
+    </section>
   );
 }

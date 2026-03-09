@@ -5,10 +5,10 @@ const cx = classNames.bind(styles);
 
 export default function Contact() {
   return (
-    <div>
+    <section id="contact" className={cx('contact')}>
       Contact
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quia.
       <a href="mailto:">email@mail.com</a>
-    </div>
+    </section>
   );
 }

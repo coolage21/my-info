@@ -6,9 +6,9 @@ const cx = classNames.bind(styles);
 
 export default function Projects() {
   return (
-    <div>
+    <section id="projects" className={cx('projects')}>
       Projects
       <Tabs/>
-    </div>
+    </section>
   );
 }

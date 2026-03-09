@@ -5,6 +5,7 @@ import { User, Category } from "@/types/user";
 import classNames from 'classnames/bind'
 import styles from "./Tabs.module.scss";
 import Modal from "@/components/common/Modal/Modal";
+import Card from '@/components/common/Card/Card';
 
 const cx = classNames.bind(styles);
 
@@ -85,7 +86,8 @@ export default function Tabs() {
           list.map((data)=> (
             <li key={data.id}>
               <button type="button" onClick={()=>findContent(data.id)} aria-labelledby="">
-                {data.id}
+                
+                <Card title={data.title} size="large" img="" desc="" badge="" />
               </button>
             </li>
           ))

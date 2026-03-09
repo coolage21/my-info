@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  border: 1px solid red;
+  position: sticky;
+  top: 0px;
+  &__inner {
+    display: flex;
+    margin: 30px;
+    background-color:antiquewhite;
+  }
+}
+.gnb{
+  display: flex;
+}
