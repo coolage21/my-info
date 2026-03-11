@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { User, Category } from "@/types/user";
 import classNames from 'classnames/bind'
 import styles from "./Tabs.module.scss";
@@ -12,6 +12,7 @@ const cx = classNames.bind(styles);
 
 
 export default function Tabs() {
+  
   // 카테고리
   const category: Category[] = ["data", "network"];
   // 데이터
@@ -56,18 +57,22 @@ export default function Tabs() {
   //클릭된 리스트
   const [selectedContent, setSelectedContent ] = useState<User | null>(null); 
   // 모달 열고 닫힘 처리
-  const [showModal, setShowModal ] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [currentId, setCurrentId] = useState();
   // 리스트 클릭 이벤트
   const findContent = (item:number)  => {  
     const data = users.find( users => users.id == item )
     if(data){
+      setCurrentId(data.id);
       setShowModal(true);
       setSelectedContent(data)
     }
   }
+  const listBtnRef = useRef<HTMLInputElement>(null);
   const handleClose = () => {
     setShowModal(false);
     setSelectedContent(null);
+    listBtnRef.current?.focus();
   }
   return (
     <div>
@@ -75,7 +80,7 @@ export default function Tabs() {
         <button onClick={()=> changeCategory('all')} aria-pressed={checkedCategory == "all"}>전체</button>
         {
           category.map((category) => (
-            <button key={category}  type='button' onClick={()=> changeCategory(category)} aria-pressed={checkedCategory === category}>
+            <button key={category} type='button' onClick={()=> changeCategory(category)} aria-pressed={checkedCategory === category}>
               {category}
             </button>
           ))
@@ -85,8 +90,7 @@ export default function Tabs() {
         {
           list.map((data)=> (
             <li key={data.id}>
-              <button type="button" onClick={()=>findContent(data.id)} aria-labelledby="">
-                
+              <button ref={data.id === currentId ? listBtnRef : null}  type="button" onClick={()=>findContent(data.id)} aria-labelledby="modal-title">
                 <Card title={data.title} size="large" img="" desc="" badge="" />
               </button>
             </li>
@@ -97,7 +101,7 @@ export default function Tabs() {
       </div>
       {
         showModal && selectedContent &&
-        <Modal user={selectedContent} onClose={handleClose} />
+        <Modal open={showModal} user={selectedContent} onClose={handleClose} />
       }
     </div>
   );
