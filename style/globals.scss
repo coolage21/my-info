@@ -34,6 +34,10 @@ body {
   --bg-color: #1e1e1e;
   --text-color: white;
 }
+.main-ly {
+  width: 1000px;
+  margin: 0 auto;
+}
 
 html {
   font-size: 100%;
@@ -45,9 +49,7 @@ body {
   color: var(--text-color);
 }
 .wrapper {
-  width: 1000px;
-  margin: 0 auto;
-  border: 1px solid lightgray;
+
 }
 
 section {

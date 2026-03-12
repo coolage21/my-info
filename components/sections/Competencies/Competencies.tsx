@@ -6,8 +6,8 @@ const cx = classNames.bind(styles);
 export default function Competencies() {
   return (
     <section id="competencies" className={cx('competencies')}>
-      <h2></h2>
-      Competencies
+      <h2>Competencies</h2>
+      
       <ul>
         <li>
           <h3></h3>

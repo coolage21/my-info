@@ -18,9 +18,9 @@ export default function LanguageSwitcher() {
 
   return (
     <>
-      <button onClick={() => changeLang("ko")}>KO</button>
-      <button onClick={() => changeLang("en")}>EN</button>
-      <button onClick={() => changeLang("cn")}>CN</button>
+      <button type="button" aria-pressed="true" onClick={() => changeLang("ko")} aria-label="한국어로 변경">KO</button>
+      <button type="button" aria-pressed="false" onClick={() => changeLang("en")} aria-label="영어로 변경">EN</button>
+      <button type="button" aria-pressed="false" onClick={() => changeLang("cn")} aria-label="중국어로 변경">CN</button>
     </>
   );
 }

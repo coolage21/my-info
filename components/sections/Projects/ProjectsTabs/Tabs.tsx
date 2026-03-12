@@ -90,7 +90,7 @@ export default function Tabs() {
         {
           list.map((data)=> (
             <li key={data.id}>
-              <button ref={data.id === currentId ? listBtnRef : null}  type="button" onClick={()=>findContent(data.id)} aria-labelledby="modal-title">
+              <button ref={data.id === currentId ? listBtnRef : null}  type="button" onClick={()=>findContent(data.id)} >
                 <Card title={data.title} size="large" img="" desc="" badge="" />
               </button>
             </li>
