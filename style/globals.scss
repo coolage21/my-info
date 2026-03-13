@@ -36,9 +36,14 @@ body {
   --bg-color: #1e1e1e;
   --text-color: white;
 }
-.main-ly {
-  width: 1000px;
+.ly-main {
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+.ly-section {
+  padding: 100px 0;
+  scroll-margin-top: 100px;
 }
 
 html {
@@ -49,11 +54,4 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
-}
-.wrapper {
-
-}
-
-section {
-  scroll-margin-top: 100px;
 }

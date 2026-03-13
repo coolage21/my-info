@@ -10,9 +10,9 @@ export default function Introduction() {
   
  
   return (
-    <section id="introduction" className={cx('introduction')}>
+    <section id="introduction" className={cx('introduction','ly-main')}>
       Introduction
-     {t('title')}
+      {t('title')}
     </section>
   );
 }

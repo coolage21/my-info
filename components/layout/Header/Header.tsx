@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className={cx('header')}>
       {/* <h1>codingage</h1> */}
-      <div className={cx('header__inner')}>
+      <div className={cx('header__inner', 'ly-main')}>
         <nav>
           <ul className={cx('gnb')}>
             <li>
@@ -32,9 +32,11 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <LanguageSwitcher/>
-        <ContrastToggle/>
-        <FontSizeControls/>
+        <div className={cx('header__utils')}>
+          <LanguageSwitcher/>
+          <ContrastToggle/>
+          <FontSizeControls/>
+        </div>
       </div>
     </header>
   );

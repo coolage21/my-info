@@ -2,5 +2,13 @@
   &__ttl {
     font-size: 20px;
     font-weight: 600;
+    display: flex;
+    
+  }
+  &__img {
+    width: 30px;
+    img {
+      width: 100%;
+    }
   }
 }

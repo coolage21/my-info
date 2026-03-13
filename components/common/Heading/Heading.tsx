@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind'
 import styles from "./Heading.module.scss";
+import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +16,12 @@ export default function TabButton({title, size}: TabButtonProps) {
   return (
     <div className={cx('heading')}>
       <h2 className={cx('heading__ttl', size)}>
-        <img src="" alt="" />
+        <div className={cx('heading__img')}>
+          <img
+          src="/file.svg"
+          alt=""
+        />
+        </div>
         {title}
       </h2>
     </div>

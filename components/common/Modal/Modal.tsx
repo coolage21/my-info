@@ -48,7 +48,7 @@ export default function Modal({user, onClose}: ModalProps) {
         <p>{user.id}</p>
         <h2 id="modal-title">{user.title}</h2>
         <p id="modal-desc"></p>
-      <button ref={btnRef} onClick={onClose}>닫기</button>
+        <button ref={btnRef} onClick={onClose}>닫기</button>
       </div>
       </FocusTrap>
     </div>
