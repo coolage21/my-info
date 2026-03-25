@@ -11,7 +11,6 @@ export default function Competencies() {
       className={cx("competencies", "ly-main", "ly-section")}
     >
       <Heading title="Competencies" size="medium" />
-      <h2 className="main-ttl">핵심역량</h2>
       <ul className={cx("competencies__cards")}>
         <li className={cx("competencies__card")}>
           <h3 className={cx("competencies__ttl", "sub-ttl")}>웹표준 준수</h3>

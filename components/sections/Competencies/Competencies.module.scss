@@ -1,9 +1,17 @@
 .competencies {
-  height: 100vh;
-  border: 1px solid red;
   &__cards {
+    display: flex;
+    flex-wrap: wrap;
   }
   &__card {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    margin-right: 2%;
+    width: 49%;
+    margin-bottom: 10px;
+    background-color: var(--lightgray-color);
+    padding: 25px;
   }
   &__ttl {
   }
