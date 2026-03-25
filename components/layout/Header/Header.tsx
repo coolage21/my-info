@@ -33,7 +33,7 @@ export default function Header() {
               <a href="#introduction">메인</a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#competencies">인사</a>
+              <a href="#strength">인사</a>
             </li>
             <li className={cx("gnb__list")}>
               <a href="#skills">상품</a>
