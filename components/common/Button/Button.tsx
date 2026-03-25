@@ -10,7 +10,6 @@ interface ButtonProps {
 }
 
 export default function Button({label, size, onClick}: ButtonProps) {
-
   return (
     <button
       type="button"

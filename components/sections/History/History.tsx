@@ -1,11 +1,12 @@
 import classNames from "classnames/bind";
 import styles from "./History.module.scss";
+import Heading from "@/components/common/Heading/Heading";
 
 const cx = classNames.bind(styles);
 
 export default function History() {
   return (
-    <section id="history" className={cx("history")}>
+    <section id="history" className={cx("history", "ly-main", "ly-section")}>
       <h2>history</h2>
       <div>
         <h3>이력사항</h3>

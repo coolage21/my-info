@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import classNames from 'classnames/bind'
 import styles from "./Modal.module.scss";
 import {User} from '@/types/user'
+import FocusTrap from "focus-trap-react";
+
 const cx = classNames.bind(styles);
 
 interface ModalProps {
@@ -16,21 +18,39 @@ export default function Modal({user, onClose}: ModalProps) {
   const btnRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    if (!open) return null;
+
     if (open) {
       btnRef.current?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
     }
-  }, [open]);
-   if (!open) return null;
+  }, [open, onClose]);
+   
   return (
     <div className={cx('modal__wrapper')} role="dialog" aria-modal="true">
+      <FocusTrap>
       <div
-        type="button"
         className={cx('modal')}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
         >
         <p>{user.id}</p>
         <h2 id="modal-title">{user.title}</h2>
-      <button ref={btnRef} onClick={onClose}>닫기</button>
+        <p id="modal-desc"></p>
+        <button ref={btnRef} onClick={onClose}>닫기</button>
       </div>
+      </FocusTrap>
     </div>
   );
 }

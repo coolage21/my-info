@@ -1,11 +1,16 @@
 import classNames from "classnames/bind";
 import styles from "./Competencies.module.scss";
+import Heading from "@/components/common/Heading/Heading";
 
 const cx = classNames.bind(styles);
 
 export default function Competencies() {
   return (
-    <section id="competencies" className={cx("competencies")}>
+    <section
+      id="competencies"
+      className={cx("competencies", "ly-main", "ly-section")}
+    >
+      <Heading title="Competencies" size="medium" />
       <h2 className="main-ttl">핵심역량</h2>
       <ul className={cx("competencies__cards")}>
         <li className={cx("competencies__card")}>

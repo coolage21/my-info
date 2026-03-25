@@ -1,19 +1,29 @@
 import classNames from 'classnames/bind'
-import styles from "./TabButton.module.scss";
+import styles from "./Heading.module.scss";
+import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
 interface TabButtonProps {
   title: string,
-  desc: string,
+  size: string,
 }
 
-export default function TabButton({title, desc}: TabButtonProps) {
+export default function TabButton({title, size}: TabButtonProps) {
+  
+  //[fontSize, setFontSize] = useState(size); // small, medium
 
   return (
     <div className={cx('heading')}>
-      <h2 className={cx('heading__ttl')}>{title}</h2>
-      <p className={cx('heading__desc')}>{desc}</p>
+      <h2 className={cx('heading__ttl', size)}>
+        <div className={cx('heading__img')}>
+          <img
+          src="/file.svg"
+          alt=""
+        />
+        </div>
+        {title}
+      </h2>
     </div>
   );
 }

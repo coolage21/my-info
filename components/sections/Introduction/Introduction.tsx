@@ -8,7 +8,7 @@ export default function Introduction() {
   const t = useTranslations("HomePage");
 
   return (
-    <section id="introduction" className={cx("introduction")}>
+    <section id="introduction" className={cx("introduction", "ly-main")}>
       Introduction
       {t("title")}
       탄탄한 구조 위에 완성도를 쌓아가는, 웹 퍼블리셔

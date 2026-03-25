@@ -3,12 +3,46 @@
   border: 1px solid red;
   position: sticky;
   top: 0px;
+  background-color: antiquewhite;
   &__inner {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 30px;
-    background-color: antiquewhite;
   }
 }
 .gnb {
-  display: flex;
+  ul {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+  }
+  .gnb {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    transform: translateX(100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.3);
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+  .toggle-btn {
+    z-index: 9999;
+    position: relative;
+  }
 }
