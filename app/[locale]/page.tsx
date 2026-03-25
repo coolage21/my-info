@@ -10,12 +10,12 @@ import TopButton from "@/components/common/TopButton/TopButton";
 export default function Home() {
   return (
     <main className="main">
-      <Introduction />
+      {/* <Introduction />
       <Strength />
       <Skills />
-      <Projects />
       <History />
-      <Contact />
+      <Projects />
+      <Contact /> */}
       <TopButton isShow={true} />
     </main>
   );

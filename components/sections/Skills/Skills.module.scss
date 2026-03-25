@@ -3,4 +3,12 @@
   }
   &__list {
   }
+
+  .icon {
+    padding: 10px;
+    border-radius: 5px;
+    &__wrapper {
+      display: flex;
+    }
+  }
 }
