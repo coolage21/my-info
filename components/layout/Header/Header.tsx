@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from 'react'
 import LanguageSwitcher from '@/components/i18n/LanguageSwitcher'
 import ContrastToggle from '@/components/accessibility/ContrastToggle/ContrastToggle'
 import FontSizeControls from '@/components/accessibility/FontSizeControls/FontSizeControls'
@@ -9,29 +10,38 @@ import styles from "./Header.module.scss";
 const cx = classNames.bind(styles);
 
 export default function Header() {
+  const [activeBtn, setActiveBtn] = useState(false);
+    const scrollCheck = () => {
+      setActiveBtn(prev => !prev);
+    } 
   return (
     <header className={cx('header')}>
-      {/* <h1>codingage</h1> */}
       <div className={cx('header__inner', 'ly-main')}>
-        <nav>
-          <ul className={cx('gnb')}>
-            <li>
-              <a href="#introduction">메인</a>
-            </li>
-            <li>
-              <a href="#competencies">핵심역량</a>
-            </li>
-            <li>
-              <a href="#skills">기술스택</a>
-            </li>
-            <li>
-              <a href="#projects">프로젝트</a>
-            </li>
-            <li>
-              <a href="#history">소개</a>
-            </li>
-          </ul>
-        </nav>
+        <div>
+          <h1>test</h1>
+          <button onClick={scrollCheck} className={cx('btn toggle-btn')}>
+            <span className="sc-only">메뉴</span>
+          </button>
+          <nav className={cx('gnb', {active:activeBtn})}>
+            <ul>
+              <li>
+                <a href="#introduction">메인</a>
+              </li>
+              <li>
+                <a href="#competencies">인사</a>
+              </li>
+              <li>
+                <a href="#skills">상품</a>
+              </li>
+              <li>
+                <a href="#projects">게시판</a>
+              </li>
+              <li>
+                <a href="#history">홍보</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div className={cx('header__utils')}>
           <LanguageSwitcher/>
           <ContrastToggle/>

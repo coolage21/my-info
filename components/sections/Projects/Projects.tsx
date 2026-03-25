@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 export default function Projects() {
   return (
-    <section id="projects" className={cx('projects')}>
+    <section id="projects" className={cx('projects', 'ly-main', 'ly-section')}>
       <Heading title="Projects" size="medium"/>
       <Tabs/>
     </section>

@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 export default function History() {
   return (
-    <section id="history" className={cx('history')}>
+    <section id="history" className={cx('history', 'ly-main', 'ly-section')} >
       <Heading title="history" size="medium"/>
       <div>
           <h3></h3>

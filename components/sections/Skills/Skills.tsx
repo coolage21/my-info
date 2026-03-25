@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 
 export default function Skills() {
   return (
-    <section id="skills" className={cx('skills')}>
+    <section id="skills" className={cx('skills', 'ly-main', 'ly-section')}>
       Skills
     </section>
   );
