@@ -15,6 +15,7 @@ export default function History() {
             <span>
               (주)포위즈시스템 <strong>웹 퍼블리셔</strong>
             </span>
+            <h3>주요 업무</h3>
             <ul>
               <li>페이지 UI 개발: 화면 레이아웃과 인터페이스 요소를 설계·구현</li>
               <li>컴포넌트 적용: 공통 UI 컴포넌트를 활용하여 디자인 일관성 유지</li>
@@ -29,7 +30,7 @@ export default function History() {
             </span>
           </li>
           <li>
-            <em>2020. 07 ~</em>
+            <em>2020. 01 ~ 2020. 08</em>
             <span>
               (주)와우프레스 <strong>웹 템플릿 제작</strong>
             </span>
@@ -37,7 +38,7 @@ export default function History() {
           <li>
             <em>2016. 02 ~ 2017. 11</em>
             <span>
-               <strong>편집 디자이너</strong>
+               (주)한빛 <strong>편집 디자이너</strong>
             </span>
           </li>
         </ul>
@@ -48,7 +49,7 @@ export default function History() {
           <li>
             <em>2025. 09. 12</em>
             <span>
-              자격증 <strong>정보처리기사</strong>
+              <strong>정보처리기사</strong> 자격증 취득
             </span>
           </li>
           <li>
@@ -58,9 +59,9 @@ export default function History() {
             </span>
           </li>
           <li>
-            <em>2020. 11 ~ 2021. 03</em>
+            <em>2020. 11 ~ 2021. 04</em>
             <span>
-              (주)포위즈시스템 <strong>웹 퍼블리셔</strong>
+              코리아IT학원 <strong>프론트엔드</strong> 과정 수료 
             </span>
           </li>
         </ul>
