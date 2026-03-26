@@ -1,14 +1,13 @@
 .header {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 90px;
+  max-width: 90%;
   margin: 0 auto;
+  margin-top: 5px;
   &__utils {
-    position: absolute;
-    right: 30px;
-    top: 30px;
+    margin-bottom: 10px;
     display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     button {
       padding: 5px 10px;
       border: 1px solid var(--silver-color);
@@ -19,14 +18,16 @@
   }
   &__inner {
     position: sticky;
-    top: 90px;
-    width: fit-content;
+    top: 0;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
     border-radius: 15px;
     padding: 12px 35px;
     background-color: var(--lightgray-color);
+    flex-wrap: wrap;
   }
 }
 .gnb {
@@ -35,49 +36,95 @@
     display: flex;
   }
   &__list {
+    a {
+      margin-right: 40px;
+      display: inline-block;
+      padding: 3px;
+    }
+    &:last-of-type {
+      a {
+        margin-right: 0;
+      }
+    }
   }
-  &__list a {
-    margin-right: 40px;
-    padding: 3px;
-    display: inline-block;
-  }
-  li:last-of-type {
-    margin-right: 0;
+}
+.toggle-btn {
+  display: none;
+  margin-left: auto;
+  width: 25px;
+  height: 20px;
+  position: relative;
+  span {
+    transition: .3s;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left:0;
+    top:0;
+    background-color: var(--gray-color);
+    &:nth-of-type(2){
+      top: 50%;
+    }
+    &:last-of-type {
+      top: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
-  }
-  .gnb {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    transform: translateX(100%);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.3s;
-    background-color: #fff;
-    box-shadow: 0 0 4px rgb(0, 0, 0, 0.3);
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(0);
+    &__inner {
+      width: 100%;
+      position: relative;
+      &.active {
+        border-radius:  15px 15px 0 0;
+        .gnb {
+          max-height: 500px;
+          opacity: 1;
+          visibility: visible;
+          border-radius: 0  0 15px 15px;
+          background-color: var(--lightgray-color);
+        }
+        .toggle-btn {
+          span {
+            top: 50%;
+            &:first-of-type{        
+              transform: rotate(45deg);
+            }
+            &:nth-of-type(2){
+              display: none;
+            }
+            &:last-of-type {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
   }
-}
-.btn.toggle-btn {
-  border: 1px solid red !important;
-  width: 30px;
-  display: flex;
-  height: 30px;
-  flex-direction: column;
-  span {
-    display: block;
+  .gnb {
     width: 100%;
-    height: 1px;
-    background-color: var(--gray-color);
+    margin:0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    &__inner {
+      flex-direction: column;
+    }
+    &__list {
+      a {
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        padding: 10px 35px;
+      }
+    }
+  }
+  .toggle-btn {
+    margin-left: auto;
+    display: block;
   }
 }

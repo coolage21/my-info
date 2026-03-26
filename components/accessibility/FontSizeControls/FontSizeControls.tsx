@@ -10,7 +10,9 @@ export default function FontSizeControls() {
     if(size == 'up'){
       setFontScale(fontScale + 0.1);
     } else {
-      setFontScale(fontScale - 0.1);
+      if(fontScale > 0.8){
+        setFontScale(fontScale - 0.1);
+      }
     }
     document.documentElement.style.setProperty("--font-scale", fontScale.toString())
   }

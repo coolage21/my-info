@@ -2,6 +2,10 @@
   background-color: bisque; 
   &--small { 
   font-size: 10px; 
+    padding: 5px 10px;
+    border: 1px solid var(--silver-color);
+    background-color: var(--lightgray-color);
+    border-radius: 5px;
   }
   &--large {
     font-size: 23px; 

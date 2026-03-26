@@ -9,7 +9,9 @@
   transform: translateY(-30px);
   transition: .3s;
   border-radius: 5px;
-  border: 1px solid var(--text-color);
+  // border: 1px solid var(--text-color);
+  background-color: var(--darkblue-color);
+  color: var(--lightgray-color);
   &.active {
     transform: translateY(0);
     opacity: 1;

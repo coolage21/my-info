@@ -6,6 +6,7 @@ import ContrastToggle from "@/components/accessibility/ContrastToggle/ContrastTo
 import FontSizeControls from "@/components/accessibility/FontSizeControls/FontSizeControls";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
+import Image from 'next/image'
 
 const cx = classNames.bind(styles);
 
@@ -16,18 +17,22 @@ export default function Header() {
   };
   return (
     <header className={cx("header")}>
-      <div className={cx("header__inner")}>
+      <div className={cx("header__utils")}>
+        <LanguageSwitcher />
+        <ContrastToggle />
+        <FontSizeControls />
+      </div>
+      <div className={cx("header__inner", { active: activeBtn })}>
         <h1>
-          <span className="sc-only">codingage</span>
-          <img src="/images/logo.png" alt="" />
+          <Image src="/images/logo.png" alt="codingage" width={134} height={23} />
         </h1>
-        <button onClick={scrollCheck} className={cx("btn toggle-btn")}>
-          <span className="sc-only">모바일 토글메뉴</span>
+        <button onClick={scrollCheck} className={cx("btn",'toggle-btn')}>
+          <i className="sc-only">모바일 토글메뉴</i>
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav className={cx("gnb", { active: activeBtn })}>
+        <nav className={cx("gnb")}>
           <ul className={cx("gnb__inner")}>
             <li className={cx("gnb__list")}>
               <a href="#introduction">메인</a>
@@ -47,11 +52,7 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <div className={cx("header__utils")}>
-        <LanguageSwitcher />
-        <ContrastToggle />
-        <FontSizeControls />
-      </div>
+    
     </header>
   );
 }

@@ -33,8 +33,12 @@ body {
 
 /* helper */
 .dark {
-  --bg-color: #1e1e1e;
+  --bg-color: #3b3b3b;
   --text-color: white;
+  --darkblue-color: #dcecff;
+  --gray-color: #f8f8f8;
+  --silver-color: #000000; 
+  --lightgray-color: #161616;
 }
 .ly-main {
   width: min(1100px, calc(100% - 40px));

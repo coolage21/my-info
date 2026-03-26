@@ -8,10 +8,9 @@ export default function Skills() {
   return (
     <section id="skills" className={cx("skills", "ly-main", "ly-section")}>
       <Heading title="기술스택" size="medium" />
-
       <ul className={cx("skills__lists")}>
         <li className={cx("skills__list")}>
-          <h3 className="sub-ttl">프론트엔드</h3>
+          <h3  className={cx("skills__list")} className="sub-ttl">프론트엔드</h3>
           <div>
             <p>SCSS 기반 프로젝트 진행</p>
             <p>JavaScript를 활용한 동적 UI 구현 및 플러그인 적용</p>
@@ -19,24 +18,28 @@ export default function Skills() {
           </div>
           <ul className={cx("icon__wrapper")}>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="" />
-              <span className={cx("sc-only")}>HTML</span>
+              <img src="/images/icons/icon_html.png" alt="HTML" />
+              {/* <span className={cx("sc-only")}>HTML</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="" />
-              <span className={cx("sc-only")}>HTML</span>
+              <img src="/images/icons/icon_css.png" alt="CSS" />
+              {/* <span className={cx("sc-only")}>CSS</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="" />
-              <span className={cx("sc-only")}>HTML</span>
+              <img src="/images/icons/icon_javascript.png" alt="Javascript" />
+              {/* <span className={cx("sc-only")}>Javascript</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="" />
-              <span className={cx("sc-only")}>HTML</span>
+              <img src="/images/icons/icon_html.png" alt="SCSS" />
+              {/* <span className={cx("sc-only")}>SCSS</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="" />
-              <span className={cx("sc-only")}>HTML</span>
+              <img src="/images/icons/icon_html.png" alt="VUE" />
+              {/* <span className={cx("sc-only")}>VUE</span> */}
+            </li>
+            <li className={cx("icon")}>
+              <img src="/images/icons/icon_html.png" alt="REACT" />
+              {/* <span className={cx("sc-only")}>REACT</span> */}
             </li>
           </ul>
         </li>
