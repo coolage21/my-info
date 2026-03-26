@@ -1,6 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Skills.module.scss";
 import Heading from "@/components/common/Heading/Heading";
+import IconLogo from "@/components/common/IconLogo/IconLogo";
 
 const cx = classNames.bind(styles);
 
@@ -26,19 +27,15 @@ export default function Skills() {
               {/* <span className={cx("sc-only")}>CSS</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_javascript.png" alt="Javascript" />
+              <img src="/images/icons/icon_js.png" alt="Javascript" />
               {/* <span className={cx("sc-only")}>Javascript</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="SCSS" />
-              {/* <span className={cx("sc-only")}>SCSS</span> */}
-            </li>
-            <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="VUE" />
+              <img src="/images/icons/icon_vue.png" alt="VUE" />
               {/* <span className={cx("sc-only")}>VUE</span> */}
             </li>
             <li className={cx("icon")}>
-              <img src="/images/icons/icon_html.png" alt="REACT" />
+              <img src="/images/icons/icon_react.png" alt="REACT" />
               {/* <span className={cx("sc-only")}>REACT</span> */}
             </li>
           </ul>
@@ -73,7 +70,7 @@ export default function Skills() {
           </ul>
         </li>
         <li className={cx("skills__list")}>
-          <h3  className={cx("skills__list")}>디자인</h3>
+          <h3 className={cx("skills__list")}>디자인</h3>
           <div className={cx("skills__txt")}>
             <p>피그마를 활용한 디자인 시안 작업</p>
             <p>UI 리소스 추출·가공</p>

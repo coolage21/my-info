@@ -1,0 +1,21 @@
+.tab {
+  &__btns {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 12px 35px;
+    background-color: var(--lightgray-color);
+    flex-wrap: wrap;
+  }
+  &__btn {
+    margin-right: 40px;
+    display: inline-block;
+    padding: 3px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
