@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 interface ModalProps {
   open: boolean;
-  user: Pick<User, "id" | "title">; // 특정항목만 불러오기
+  user: Pick<User, "title" | "subDesc" | "date" | "count" | "link" | "tool" | "contList" | "strength">; // 특정항목만 불러오기
   // user: Omit<User, "email">; // 특정항목만 빼기
   // user: Partial<User>; // 전부 선택적
   onClose: () => void;
@@ -19,7 +19,6 @@ export default function Modal({user, onClose}: ModalProps) {
 
   useEffect(() => {
     if (!open) return null;
-
     if (open) {
       btnRef.current?.focus();
 
@@ -36,7 +35,7 @@ export default function Modal({user, onClose}: ModalProps) {
     };
     }
   }, [open, onClose]);
-   
+
   return (
     <div className={cx('modal__wrapper')} role="dialog" aria-modal="true">
       <FocusTrap>
@@ -45,9 +44,31 @@ export default function Modal({user, onClose}: ModalProps) {
         aria-labelledby="modal-title"
         aria-describedby="modal-desc"
         >
-        <p>{user.id}</p>
-        <h2 id="modal-title">{user.title}</h2>
-        <p id="modal-desc"></p>
+        <h2 id="modal-title" className={cx("modal-title")}>{user.title}</h2>
+        <p id="modal-desc" className={cx("modal-desc")}>{user.subDesc}</p>
+        <div>
+        {
+          user.tool.map((tool) => (
+            <p>{tool}</p>
+          ))
+        }
+        </div>
+        <div>
+          <p className={cx("modal__date")}>{user.date}</p>
+          <div>
+            {/* <p id="modal-desc">{user.link}</p> */}
+            {
+              user.link.map((link) => (
+                <a className={cx("modal__link")} href={link.link}>{link.linkttl}</a>
+              ))
+            }
+          </div>
+        </div>
+        <div>
+            {/* <p id="modal-desc">{user.contList}</p>
+          <p id="modal-desc">{user.strength}</p> */}
+        </div>
+
         <button ref={btnRef} onClick={onClose}>닫기</button>
       </div>
       </FocusTrap>

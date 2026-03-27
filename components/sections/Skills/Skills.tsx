@@ -17,7 +17,9 @@ export default function Skills() {
             <p>JavaScript를 활용한 동적 UI 구현 및 플러그인 적용</p>
             <p>Vue·React 환경 퍼블리싱 및 API 연동, 데이터 바인딩</p>
           </div>
-          <ul className={cx("icon__wrapper")}>
+          <div className={cx("icon__wrapper")}>
+            <IconLogo img={'/images/icons/icon_html.png'} imgAlt={'HTML'} />
+            
             <li className={cx("icon")}>
               <img src="/images/icons/icon_html.png" alt="HTML" />
               {/* <span className={cx("sc-only")}>HTML</span> */}
@@ -38,7 +40,7 @@ export default function Skills() {
               <img src="/images/icons/icon_react.png" alt="REACT" />
               {/* <span className={cx("sc-only")}>REACT</span> */}
             </li>
-          </ul>
+          </div>
         </li>
         <li className={cx("skills__list")}>
           <h3 className={cx("skills__ttl")}>협업 및 개발 도구</h3>

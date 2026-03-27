@@ -1,22 +1,22 @@
 import classNames from "classnames/bind";
 import styles from "./IconLogo.module.scss";
+import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
-interface IconLogoProps {
-  label: string;
-  size: "small" | "large";
-  onClick?: () => void;
+type IconLogoProps {
+  img: string;
+  imgAlt?: string;
+  size?: "small" | "large" | "medium";
+  desc?: string;
 }
 
-export default function IconLogo({ label, size, onClick }: IconLogoProps) {
+export default function IconLogo({ size = "medium", imgAlt, img, desc }: IconLogoProps) {
   return (
-    <button
-      type="button"
-      className={cx("btn", `btn--${size}`)}
-      onClick={onClick}
+    <span
+      className={cx("icon", `icon--${size}`)}
     >
-      <p>{label}</p>
-    </button>
+      <Image src={img} alt={imgAlt} width={size == "medium" ? 30 : 10}/>
+    </span>
   );
 }
