@@ -27,7 +27,7 @@ export default function Card({
     <div className={cx("card", `card--${size}`)}>
       {img && (
         <div className={cx("card__img-wrapper")}>
-          <Image src={img} ale={imgAlt} width={134} height={140} />
+          <Image src={img} alt={imgAlt} width={134} height={140} />
         </div>
       )}
       {title && <p className={cx("card__ttl")}>{title}</p>}
