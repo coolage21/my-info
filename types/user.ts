@@ -10,7 +10,7 @@ export interface User {
   subDesc: string; // ✅ "나 이거 쓸 거야!"라고 등록
   mainDesc: string;
   role: string;
-  link: { link: string; linkttl: string }[];
+  link?: { link: string; linkttl: string }[];
   contList: string[];
   strength: string[];
   image: string;

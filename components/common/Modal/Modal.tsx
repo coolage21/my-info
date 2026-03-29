@@ -82,21 +82,23 @@ export default function Modal({ open, user, onClose }: ModalProps) {
                 <p className={cx("modal__date")}>{user.date}</p>
               </div>
             </div>
-            <div className={cx("modal__cont")}>
-              <h3 className={cx("modal__sub-ttl")}>링크</h3>
-              {/* <p id="modal-desc">{user.link}</p> */}
-              <div className={cx("modal__links")}>
-                {user.link.map((link) => (
-                  <a
-                    className={cx("modal__link")}
-                    target="_blank"
-                    href={link.link}
-                  >
-                    {link.linkttl}
-                  </a>
-                ))}
+            {user.link && user.link.length > 0 && (
+              <div className={cx("modal__cont")}>
+                <h3 className={cx("modal__sub-ttl")}>링크</h3>
+                {/* <p id="modal-desc">{user.link}</p> */}
+                <div className={cx("modal__links")}>
+                  {user.link.map((link) => (
+                    <a
+                      className={cx("modal__link")}
+                      target="_blank"
+                      href={link.link}
+                    >
+                      {link.linkttl}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
             <hr />
             <div>
               {/* <p id="modal-desc">{user.contList}</p>

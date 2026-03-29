@@ -23,6 +23,10 @@
   &__list {
     > button {
       width: 100%;
+      transition: 0.3s;
+      &:hover {
+        transform: translateY(-10px);
+      }
     }
     width: 33.3333%;
     padding: 0 10px;
