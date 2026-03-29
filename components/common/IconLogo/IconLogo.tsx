@@ -9,6 +9,8 @@ type IconLogoProps = {
   imgAlt?: string;
   size?: "small" | "large" | "medium";
   desc?: string;
+  width: string;
+  height: string;
 };
 
 export default function IconLogo({
