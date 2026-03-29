@@ -119,6 +119,11 @@ export default function Modal({ open, user, onClose }: ModalProps) {
                   ))}
                 </ul>
               </div> */}
+              <div className={cx("modal__img-wrapper")}>
+                {user.imageList.map((imageList) => (
+                  <img src={imageList} alt="" />
+                ))}
+              </div>
             </div>
           </div>
           <button ref={btnRef} onClick={onClose} className={cx("close-btn")}>

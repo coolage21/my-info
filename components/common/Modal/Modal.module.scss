@@ -41,7 +41,7 @@
     margin-bottom: 3px;
     color: var(--gray-color);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 300;
   }
   hr {
     border: 1px solid var(--silver-color);
@@ -68,6 +68,9 @@
   &__links {
     display: flex;
     gap: 30px;
+  }
+  &__img-wrapper {
+    border: 1px solid var(--silver-color);
   }
 }
 .close-btn {
