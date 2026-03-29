@@ -25,11 +25,11 @@ interface ModalProps {
   onClose: () => void;
 }
 
-export default function Modal({ user, onClose }: ModalProps) {
-  const btnRef = useRef<HTMLInputElement>(null);
+export default function Modal({ open, user, onClose }: ModalProps) {
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (!open) return null;
+    if (!open) return;
     if (open) {
       btnRef.current?.focus();
 
@@ -122,7 +122,7 @@ export default function Modal({ user, onClose }: ModalProps) {
           <button ref={btnRef} onClick={onClose} className={cx("close-btn")}>
             <Image
               src="/images/icon_close.png"
-              srcAlt=""
+              alt=""
               width={30}
               height={30}
             ></Image>

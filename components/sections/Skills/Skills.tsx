@@ -21,32 +21,32 @@ export default function Skills() {
             <IconLogo
               img={"/images/icons/icon_html.png"}
               imgAlt={"HTML"}
-              width={"25"}
-              height={"34"}
+              width={25}
+              height={34}
             />
             <IconLogo
               img={"/images/icons/icon_css.png"}
               imgAlt={"css"}
-              width={"25"}
-              height={"35"}
+              width={25}
+              height={35}
             />
             <IconLogo
               img={"/images/icons/icon_js.png"}
               imgAlt={"javascriopt"}
-              width={"29"}
-              height={"29"}
+              width={29}
+              height={29}
             />
             <IconLogo
               img={"/images/icons/icon_vue.png"}
               imgAlt={"vue"}
-              width={"35"}
-              height={"30"}
+              width={35}
+              height={30}
             />
             <IconLogo
               img={"/images/icons/icon_react.png"}
               imgAlt={"react"}
-              width={"33"}
-              height={"29"}
+              width={33}
+              height={29}
             />
           </div>
         </li>
@@ -60,32 +60,32 @@ export default function Skills() {
             <IconLogo
               img={"/images/icons/icon_git.png"}
               imgAlt={"git"}
-              width={"34"}
-              height={"34"}
+              width={34}
+              height={34}
             />
             <IconLogo
               img={"/images/icons/icon_scss.png"}
               imgAlt={"scss"}
-              width={"37"}
-              height={"28"}
+              width={37}
+              height={28}
             />
             <IconLogo
               img={"/images/icons/icon_postman.png"}
               imgAlt={"postman"}
-              width={"33"}
-              height={"34"}
+              width={33}
+              height={34}
             />
             <IconLogo
               img={"/images/icons/icon_sourcetree.png"}
               imgAlt={"sourcetree"}
-              width={"27"}
-              height={"34"}
+              width={27}
+              height={34}
             />
             <IconLogo
               img={"/images/icons/icon_vs.png"}
               imgAlt={"vs"}
-              width={"34"}
-              height={"34"}
+              width={34}
+              height={34}
             />
           </ul>
         </li>
@@ -100,32 +100,32 @@ export default function Skills() {
             <IconLogo
               img={"/images/icons/icon_xd.png"}
               imgAlt={"xd"}
-              width={"45"}
-              height={"45"}
+              width={45}
+              height={45}
             />
             <IconLogo
               img={"/images/icons/icon_photoshop.png"}
               imgAlt={"photoshop"}
-              width={"45"}
-              height={"45"}
+              width={45}
+              height={45}
             />
             <IconLogo
               img={"/images/icons/icon_ai.png"}
               imgAlt={"ai"}
-              width={"45"}
-              height={"45"}
+              width={45}
+              height={45}
             />
             <IconLogo
               img={"/images/icons/icon_figma.png"}
               imgAlt={"figma"}
-              width={"47"}
-              height={"45"}
+              width={47}
+              height={45}
             />
             <IconLogo
               img={"/images/icons/icon_zeplin.png"}
               imgAlt={"zeplin"}
-              width={"34"}
-              height={"34"}
+              width={34}
+              height={34}
             />
           </ul>
         </li>
