@@ -19,6 +19,7 @@ interface ModalProps {
     | "tool"
     | "contList"
     | "strength"
+    | "imageList"
   >; // 특정항목만 불러오기
   // user: Omit<User, "email">; // 특정항목만 빼기
   // user: Partial<User>; // 전부 선택적
