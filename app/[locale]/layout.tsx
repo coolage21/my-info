@@ -15,19 +15,13 @@ const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
 });
 
-// type Props = {
-//   children: React.ReactNode;
-//   params: { locale: string };
-// };
-
-export default async function RootLayout({
-  children,
-  params,
-}: {
+type Props = {
   children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const { locale } = params;
+  params: Promise<{ locale: string }>;
+};
+
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
