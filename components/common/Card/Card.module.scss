@@ -1,9 +1,33 @@
 .card {
-  &--small {}
-  &--large {}
-  &--medium {}
-  &__image-wrapper {}
-  &__ttl {}
-  &__desc {}
-  &__role {}
+  text-align: left;
+  &--small {
+  }
+  &--large {
+  }
+  &--medium {
+  }
+  &__img-wrapper {
+    width: 100%;
+    background-size: cover;
+    border: 1px solid var(--silver-color);
+    height: 220px; /*수정필요*/
+    overflow: hidden; /*수정필요*/
+    img {
+      width: 100%;
+      height: fit-content; /*수정필요*/
+    }
+  }
+  &__ttl {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  &__desc {
+    margin-bottom: 35px;
+    color: var(--gray-color);
+  }
+  &__role {
+    color: var(--darkblue-color);
+    font-weight: 500;
+  }
 }

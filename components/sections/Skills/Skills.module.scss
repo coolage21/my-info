@@ -1,8 +1,18 @@
 .skills {
   text-align: center;
   &__lists {
+    margin-bottom: -95px;
   }
   &__list {
+    margin-bottom: 95px;
+  }
+  &__ttl {
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  &__txt {
+    margin-bottom: 18px;
+    color: var(--gray-color);
   }
   .icon {
     padding: 10px;
@@ -10,6 +20,7 @@
     &__wrapper {
       display: flex;
       justify-content: center;
+      gap: 13px;
     }
   }
 }

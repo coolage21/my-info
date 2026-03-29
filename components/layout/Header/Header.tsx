@@ -6,7 +6,7 @@ import ContrastToggle from "@/components/accessibility/ContrastToggle/ContrastTo
 import FontSizeControls from "@/components/accessibility/FontSizeControls/FontSizeControls";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
-import Image from 'next/image'
+import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
@@ -18,15 +18,22 @@ export default function Header() {
   return (
     <header className={cx("header")}>
       <div className={cx("header__utils")}>
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
         <ContrastToggle />
         <FontSizeControls />
       </div>
       <div className={cx("header__inner", { active: activeBtn })}>
         <h1>
-          <Image src="/images/logo.png" alt="codingage" width={134} height={23} />
+          <a href="#introduction">
+            <Image
+              src="/images/logo.png"
+              alt="codingage"
+              width={134}
+              height={23}
+            />
+          </a>
         </h1>
-        <button onClick={scrollCheck} className={cx("btn",'toggle-btn')}>
+        <button onClick={scrollCheck} className={cx("btn", "toggle-btn")}>
           <i className="sc-only">모바일 토글메뉴</i>
           <span></span>
           <span></span>
@@ -35,24 +42,23 @@ export default function Header() {
         <nav className={cx("gnb")}>
           <ul className={cx("gnb__inner")}>
             <li className={cx("gnb__list")}>
-              <a href="#introduction">메인</a>
+              <a href="#strength">핵심역량</a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#strength">인사</a>
+              <a href="#skills">기술스택</a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#skills">상품</a>
+              <a href="#history">이력사항</a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#projects">게시판</a>
+              <a href="#projects">프로젝트</a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#history">홍보</a>
+              <a href="#contact">컨택</a>
             </li>
           </ul>
         </nav>
       </div>
-    
     </header>
   );
 }

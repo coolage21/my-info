@@ -43,6 +43,9 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    color: var(--darkblue-color);
+  }
 }
 
 button,
@@ -55,4 +58,8 @@ select {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+em {
+  font-style: normal;
 }

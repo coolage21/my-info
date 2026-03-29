@@ -1,13 +1,15 @@
-.btn {
-  background-color: bisque; 
-  &--small { 
-  font-size: 10px; 
-    padding: 5px 10px;
-    border: 1px solid var(--silver-color);
-    background-color: var(--lightgray-color);
-    border-radius: 5px;
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 3px rgba(160, 160, 160, 0.715);
+  background-color: #fff;
+  &--small {
   }
   &--large {
-    font-size: 23px; 
+    font-size: 23px;
   }
 }

@@ -12,9 +12,30 @@
     margin-bottom: 10px;
     background-color: var(--lightgray-color);
     padding: 25px;
+    border-radius: 10px;
   }
   &__ttl {
+    font-weight: 500;
+    margin-bottom: 15px;
   }
   &__desc {
+    color: var(--gray-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .strength {
+    &__cards {
+      justify-content: center;
+    }
+    &__card {
+      margin-right: 0;
+      width: 100%;
+      max-width: 540px;
+    }
+    &__ttl {
+    }
+    &__desc {
+    }
   }
 }

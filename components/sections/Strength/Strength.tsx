@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 export default function Strength() {
   return (
     <section id="strength" className={cx("strength", "ly-main", "ly-section")}>
-      <Heading title="Strength" size="medium" />
+      <Heading title="핵심역량" size="medium" />
       <ul className={cx("strength__cards")}>
         <li className={cx("strength__card")}>
           <h3 className={cx("strength__ttl", "sub-ttl")}>웹표준 준수</h3>
@@ -15,7 +15,7 @@ export default function Strength() {
             w3c에서 권장하는 웹표준 마크업과 css, js 표준을 준수하여 코딩
           </p>
           <p className={cx("strength__desc")}>
-            시맨틱 태그를 사용하여 구조를 설계하고 문서의 의미를 명확하게 전달
+            시맨틱 태그를 사용하여 구조를 설계하고 의미를 명확하게 전달
           </p>
         </li>
         <li className={cx("strength__card")}>
@@ -31,7 +31,7 @@ export default function Strength() {
         <li className={cx("strength__card")}>
           <h3 className={cx("strength__ttl", "sub-ttl")}>웹 호환성 고려</h3>
           <p className={cx("strength__desc")}>
-            크로스 브라우징을 위한 벤더 프리픽스에 대한 이해도 보유
+            safari 및 웹뷰 환경 등 다양한 환경에 대응하여 크로스 브라우징 구현
           </p>
           <p className={cx("strength__desc")}>
             다양한 디바이스에 대응하는 반응형 웹 퍼블리싱 진행
@@ -45,7 +45,7 @@ export default function Strength() {
             스타일가이드를 기반으로 폰트, 컬러, 레이아웃 표준화
           </p>
           <p className={cx("strength__desc")}>
-            vue, react와 같은 프레임워크 사용 시 컴포넌트로 UI 분리
+            프론트엔드 프레임워크 사용 시 컴포넌트로 UI 분리
           </p>
         </li>
       </ul>

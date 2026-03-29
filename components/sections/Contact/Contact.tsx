@@ -12,14 +12,14 @@ export default function Contact() {
         <div className={cx("contact__txt")}>
           <p>기본에 충실하되 유연한 사고를 가지고</p>
           <p>업무에 임하고자 합니다.</p>
-          <p>함께 작업하고 싶거나 궁금한 점이 있으시면</p>
+          <p>함께 작업하고 싶거나 궁금한 점이 있으면</p>
           <p>언제든지 연락주세요.</p>
         </div>
         <div className={cx("profile")}>
           <h3 className={cx("sc-only")}>profile</h3>
           <div className={cx("profile__main")}>
             <h4 className={cx("profile__name")}>최하혜</h4>
-            <p className={cx("profile__job")}>| 웹퍼블리셔, 프론트엔드개발자</p>
+            <p className={cx("profile__job")}>웹 퍼블리셔 | UI개발자</p>
           </div>
           <ul className={cx("profile__conts")}>
             <li className={cx("profile__cont")}>
@@ -31,7 +31,7 @@ export default function Contact() {
                   height={16}
                 />
               </span>
-              <b>010-5914-0214</b>
+              <em>010-5914-0214</em>
             </li>
             <li className={cx("profile__cont")}>
               <span>
@@ -42,7 +42,7 @@ export default function Contact() {
                   height={16}
                 />
               </span>
-              <b>www.choihh.com</b>
+              <em>www.choihh.com</em>
             </li>
             <li className={cx("profile__cont")}>
               <span>
