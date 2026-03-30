@@ -4,6 +4,7 @@ import styles from "./Modal.module.scss";
 import { User } from "@/types/user";
 import FocusTrap from "focus-trap-react";
 import Image from "next/image";
+import IconLogo from "@/components/common/IconLogo/IconLogo";
 
 const cx = classNames.bind(styles);
 
@@ -69,7 +70,14 @@ export default function Modal({ open, user, onClose }: ModalProps) {
               <h3 className={cx("modal__sub-ttl")}>기술 스택</h3>
               <div className={cx("modal__skill")}>
                 {user.tool.map((tool) => (
-                  <p>{tool}</p>
+              
+                  <IconLogo
+                    img={`/images/icons/icon_${tool}.png`}
+                    imgAlt={"HTML"}
+                    width={17}
+                    height={18}
+                    size={"small"}
+                 />
                 ))}
               </div>
             </div>

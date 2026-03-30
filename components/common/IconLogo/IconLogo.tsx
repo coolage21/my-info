@@ -23,7 +23,11 @@ export default function IconLogo({
 }: IconLogoProps) {
   return (
     <span className={cx("icon", `icon--${size}`)}>
-      <Image src={img} alt={imgAlt} width={width} height={height} />
+      <Image src={img} alt={imgAlt} width={width} height={height} 
+        style={{
+        height: "auto",
+      }}
+      />
     </span>
   );
 }

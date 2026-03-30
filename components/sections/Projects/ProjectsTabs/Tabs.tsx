@@ -47,7 +47,7 @@ export default function Tabs() {
         "/images/screenshot/copyright_03.png",
       ],
       imageAlt: "저작권배움터 메인페이지 썸네일",
-      tool: ["html", "css", "javascript", "figma", "svn", "zeplin"], // 기술스택
+      tool: ["html", "css", "js", "figma", "zeplin"], // 기술스택
       contList: [
         // 주요내용
         "기능 개선 페이지 퍼블리싱",
@@ -89,7 +89,7 @@ export default function Tabs() {
         "/images/screenshot/copyright_03.png",
       ],
       imageAlt: "nexus 메인페이지 썸네일",
-      tool: ["html", "css", "javascript", "vue.js", "figma", "zeplin"], // 기술스택
+      tool: ["html", "css", "js", "vue", "figma", "zeplin"], // 기술스택
       contList: [
         // 주요내용
         "Figma를 활용한 UI 디자인",
@@ -134,7 +134,7 @@ export default function Tabs() {
         "/images/screenshot/elearning_03.png",
       ],
       imageAlt: "e학습터 메인페이지 썸네일",
-      tool: ["html", "css", "javascript", "vue.js", "zeplin", "git"], // 기술스택
+      tool: ["html", "css", "js", "vue", "zeplin", "git"], // 기술스택
       contList: [
         // 주요내용
         "JSP 내 HTML을 Vue.js 템플릿 구조로 변환",
