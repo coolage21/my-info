@@ -127,11 +127,11 @@ export default function Tabs() {
       //     link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
       //   },
       // ],
-      image: "/images/screenshot/copyright_01.png", // 썸네일
+      image: "/images/screenshot/elearning_01.png", // 썸네일
       imageList: [
-        "/images/screenshot/copyright_01.png",
-        "/images/screenshot/copyright_02.png",
-        "/images/screenshot/copyright_03.png",
+        "/images/screenshot/elearning_01.png",
+        "/images/screenshot/elearning_02.png",
+        "/images/screenshot/elearning_03.png",
       ],
       imageAlt: "e학습터 메인페이지 썸네일",
       tool: ["html", "css", "javascript", "vue.js", "zeplin", "git"], // 기술스택
@@ -164,8 +164,8 @@ export default function Tabs() {
           link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
         },
       ],
-      image: "/images/screenshot/img_dmarket.png", // 썸네일
-      imageList: ["/images/screenshot/img_dmarket.png"],
+      image: "/images/screenshot/dmarket_01.png", // 썸네일
+      imageList: ["/images/screenshot/dmarket_01.png", "/images/screenshot/dmarket_02.webp"],
       imageAlt: "다비치 마켓 사이트 샘플 이미지",
       tool: ["git", "scss", "postman", "sourcetree"], // 기술스택
       contList: [

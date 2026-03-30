@@ -5,6 +5,7 @@
   margin-top: 5px;
   position: sticky;
   top: -40px;
+  z-index: 11;
   &__utils {
     margin-bottom: 10px;
     display: flex;
@@ -29,6 +30,23 @@
     padding: 12px 35px;
     background-color: var(--lightgray-color);
     flex-wrap: wrap;
+  }
+}
+.logo {
+  &__link {
+    display: block;
+    position: relative;
+    width: 268px;
+    height: 46px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top:0;
+      left:0;
+      height: 46px;
+      width: 536px;
+      max-width: 200%;
+    }
   }
 }
 .gnb {

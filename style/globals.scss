@@ -39,15 +39,48 @@ body {
   --gray-color: #f8f8f8;
   --silver-color: #000000;
   --lightgray-color: #161616;
+  .icon {
+      &--black {
+        left: -100% !important;
+        &__wrapper {
+        }
+      }
+  }
+  .close-btn {
+    img {
+      left: -100%;
+    }
+  }
+  .logo__link {
+    img {
+        left: -100%;
+    }
+  }
 }
+.icon {
+    &--black {
+      position: absolute;
+      top:0;
+      left:0;
+      height: 16px;
+      width: 32px;
+      max-width: 200%;
+      &__wrapper {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+      }
+    }
+}
+
 .ly-main {
   width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
 }
 .ly-section {
   padding-top: 100px;
-
-  scroll-margin-top: 100px;
+  //scroll-margin-top: 100px;
 }
 .sc-only {
   position: absolute;

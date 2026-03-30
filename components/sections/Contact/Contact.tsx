@@ -23,9 +23,10 @@ export default function Contact() {
           </div>
           <ul className={cx("profile__conts")}>
             <li className={cx("profile__cont")}>
-              <span>
+              <span className={cx("icon--black__wrapper")}>
                 <Image
-                  src="/images/icon_phone.png"
+                  className={cx("icon--black")}
+                  src="/images/icons/icon_phone.png"
                   alt="전화번호"
                   width={16}
                   height={16}
@@ -34,9 +35,10 @@ export default function Contact() {
               <em>010-5914-0214</em>
             </li>
             <li className={cx("profile__cont")}>
-              <span>
+              <span className={cx("icon--black__wrapper")}>
                 <Image
-                  src="/images/icon_global.png"
+                  className={cx("icon--black")}
+                  src="/images/icons/icon_global.png"
                   alt="홈페이지 주소"
                   width={16}
                   height={16}
@@ -45,9 +47,10 @@ export default function Contact() {
               <em>www.choihh.com</em>
             </li>
             <li className={cx("profile__cont")}>
-              <span>
+              <span className={cx("icon--black__wrapper")}>
                 <Image
-                  src="/images/icon_mail.png"
+                  className={cx("icon--black")}
+                  src="/images/icons/icon_mail.png"
                   alt="메일주소"
                   width={16}
                   height={16}

@@ -24,12 +24,12 @@ export default function Header() {
       </div>
       <div className={cx("header__inner", { active: activeBtn })}>
         <h1>
-          <a href="#introduction">
+          <a href="#introduction" className={cx("logo__link")}>
             <Image
-              src="/images/logo.png"
+              src="/images/icons/icon_logo.png"
               alt="codingage"
-              width={134}
-              height={23}
+              width={268}
+              height={46}
             />
           </a>
         </h1>

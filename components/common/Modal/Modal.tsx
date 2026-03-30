@@ -129,10 +129,10 @@ export default function Modal({ open, user, onClose }: ModalProps) {
           </div>
           <button ref={btnRef} onClick={onClose} className={cx("close-btn")}>
             <Image
-              src="/images/icon_close.png"
+              src="/images/icons/icon_close.png"
               alt=""
-              width={30}
-              height={30}
+              width={80}
+              height={40}
             ></Image>
             <span className={cx("sc-only")}>닫기</span>
           </button>
