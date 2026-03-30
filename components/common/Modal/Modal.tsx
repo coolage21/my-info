@@ -70,21 +70,20 @@ export default function Modal({ open, user, onClose }: ModalProps) {
               <h3 className={cx("modal__sub-ttl")}>기술 스택</h3>
               <div className={cx("modal__skill")}>
                 {user.tool.map((tool) => (
-              
                   <IconLogo
                     img={`/images/icons/icon_${tool}.png`}
                     imgAlt={"HTML"}
                     width={17}
                     height={18}
                     size={"small"}
-                 />
+                  />
                 ))}
               </div>
             </div>
             <div className={cx("modal__conts")}>
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>참여인원</h3>
-                <p className={cx("modal__date")}>{user.count}</p>
+                <p className={cx("modal__date")}>{user.count}명</p>
               </div>
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>기간</h3>

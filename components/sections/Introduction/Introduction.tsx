@@ -25,7 +25,7 @@ export default function Introduction() {
           <p>웹 퍼블리셔</p>
         </h2>
         <div className={cx("introduction__about")}>
-          <p>안녕하세요. 유지보수를 고려한 컴포넌트 설계를 지향하며, </p>
+          <p>유지보수를 고려한 컴포넌트 설계를 지향하며, </p>
           <p>
             구조화된 마크업에서 즐거움을 찾는 <b>웹 퍼블리셔 최하혜</b>입니다.
           </p>
@@ -33,9 +33,8 @@ export default function Introduction() {
       </div>
       <div className={cx("introduction__desc")}>
         <p>
-          저는
-          <span>4</span>
-          <span>3</span>개월간
+          저는 <span>4</span>
+          <span>7</span>개월간
         </p>
         <p>
           <span>1</span>

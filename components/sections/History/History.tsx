@@ -27,7 +27,7 @@ export default function History() {
                     {/* 컴포넌트 적용:  */}
                     공통 UI 컴포넌트 활용
                   </li>
-                  <li>WCAG 기준에 맞춰 접근성 점검 및 개선</li>
+                  <li>KWCAG 기준에 맞춰 접근성 점검 및 개선</li>
                   <li>다양한 디바이스 별 최적화를 위한 반응형 작업</li>
                 </ul>
               </div>

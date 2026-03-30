@@ -7,16 +7,17 @@
   justify-content: center;
   box-shadow: 0 0 3px rgba(160, 160, 160, 0.715);
   background-color: #fff;
-  
+
   &--small {
     width: 30px;
     height: 30px;
   }
   &--large {
-    font-size: 23px;
+    font-size: calc(var(--text-xxl) * var(--font-scale));
   }
   &--fill {
     border-radius: 8px;
     overflow: hidden;
+    background-color: transparent;
   }
 }

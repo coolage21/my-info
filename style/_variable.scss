@@ -3,13 +3,21 @@
   --font-scale: 1;
 
   /* typography scale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-md: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 2rem;
+  // --text-xs: 0.75rem;
+  // --text-sm: 0.875rem;
+  // --text-md: 1rem;
+  // --ㅈtext-lg: 1.125rem;
+  // --text-xl: 1.25rem;
+  // --text-2xl: 1.5rem;
+  // --text-3xl: 2rem;
+
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-md: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-xxl: 1.5rem; /* 24px */
+  --text-xxxl: 2.5rem; /* 40px */
 
   /* line height */
   --leading-normal: 1.3;
@@ -37,4 +45,9 @@
   --round-lg: 15px;
 
   --img-left: 0;
+}
+@media (max-width: 768px) {
+  :root {
+    --text-xxxl: 2rem;
+  }
 }

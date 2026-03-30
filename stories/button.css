@@ -5,7 +5,7 @@
   border-radius: 3em;
   font-weight: 700;
   line-height: 1;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .storybook-button--primary {
   background-color: #555ab9;
@@ -22,7 +22,7 @@
 }
 .storybook-button--medium {
   padding: 11px 20px;
-  font-size: 14px;
+  font-size: calc(var(--text-sm) * var(--font-scale));
 }
 .storybook-button--large {
   padding: 12px 24px;

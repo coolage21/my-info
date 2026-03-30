@@ -31,6 +31,12 @@ export default function Skills() {
               height={35}
             />
             <IconLogo
+              img={"/images/icons/icon_scss.png"}
+              imgAlt={"scss"}
+              width={37}
+              height={28}
+            />
+            <IconLogo
               img={"/images/icons/icon_js.png"}
               imgAlt={"javascriopt"}
               width={29}
@@ -53,7 +59,8 @@ export default function Skills() {
         <li className={cx("skills__list")}>
           <h3 className={cx("skills__ttl")}>협업 및 개발 도구</h3>
           <div className={cx("skills__txt")}>
-            <p>git 기반 형상 관리 및 협업</p>
+            <p>Git 기반 형상 관리</p>
+            <p>Github, Postman, Zeplin을 통한 협업</p>
             <p>VSCode 에디터 사용 및 다양한 확장 기능 활용</p>
           </div>
           <ul className={cx("icon__wrapper")}>
@@ -63,12 +70,7 @@ export default function Skills() {
               width={34}
               height={34}
             />
-            <IconLogo
-              img={"/images/icons/icon_scss.png"}
-              imgAlt={"scss"}
-              width={37}
-              height={28}
-            />
+
             <IconLogo
               img={"/images/icons/icon_postman.png"}
               imgAlt={"postman"}
@@ -87,14 +89,19 @@ export default function Skills() {
               width={34}
               height={34}
             />
+            <IconLogo
+              img={"/images/icons/icon_zeplin.png"}
+              imgAlt={"zeplin"}
+              width={34}
+              height={34}
+            />
           </ul>
         </li>
         <li className={cx("skills__list")}>
           <h3 className={cx("skills__ttl")}>디자인</h3>
           <div className={cx("skills__txt")}>
             <p>피그마를 활용한 디자인 작업</p>
-            <p>UI 리소스 추출·가공</p>
-            <p>Zeplin 기반 디자이너와 협업</p>
+            <p>UI 리소스 작업</p>
           </div>
           <ul className={cx("icon__wrapper")}>
             <IconLogo
@@ -124,12 +131,6 @@ export default function Skills() {
               width={47}
               height={45}
               fill={true}
-            />
-            <IconLogo
-              img={"/images/icons/icon_zeplin.png"}
-              imgAlt={"zeplin"}
-              width={34}
-              height={34}
             />
           </ul>
         </li>

@@ -4,6 +4,7 @@
     gap: 40px;
     padding: 50px;
     background-color: var(--lightgray-color);
+    border: 1px solid var(--silver-color);
     border-radius: 10px;
   }
   &__list {
@@ -18,7 +19,7 @@
   &__current {
   }
   &__main {
-    font-size: 14px;
+    font-size: calc(var(--text-sm) * var(--font-scale));
     font-weight: 500;
     padding: 4px 5px;
     border-radius: 5px;
