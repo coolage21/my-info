@@ -8,6 +8,7 @@ type IconLogoProps = {
   img: string;
   imgAlt?: string;
   size?: "small" | "large" | "medium";
+  fill?: boolean;
   desc?: string;
   width: number;
   height: number;
@@ -19,10 +20,11 @@ export default function IconLogo({
   img,
   width,
   height,
+  fill = "false",
   desc,
 }: IconLogoProps) {
   return (
-    <span className={cx("icon", `icon--${size}`)}>
+    <span className={cx("icon", `icon--${size}`, `${fill == true ? "icon--fill" : ""}`)}>
       <Image src={img} alt={imgAlt} width={width} height={height} 
         style={{
         height: "auto",

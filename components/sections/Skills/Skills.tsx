@@ -102,24 +102,28 @@ export default function Skills() {
               imgAlt={"xd"}
               width={45}
               height={45}
+              fill={true}
             />
             <IconLogo
               img={"/images/icons/icon_photoshop.png"}
               imgAlt={"photoshop"}
               width={45}
               height={45}
+              fill={true}
             />
             <IconLogo
               img={"/images/icons/icon_ai.png"}
               imgAlt={"ai"}
               width={45}
               height={45}
+              fill={true}
             />
             <IconLogo
               img={"/images/icons/icon_figma.png"}
               imgAlt={"figma"}
               width={47}
               height={45}
+              fill={true}
             />
             <IconLogo
               img={"/images/icons/icon_zeplin.png"}

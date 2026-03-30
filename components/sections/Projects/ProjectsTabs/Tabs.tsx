@@ -63,7 +63,7 @@ export default function Tabs() {
       title: "NEXUS",
       mainDesc: "네트워크 모니터링 관리 시스템", // 메인텍스트
       subDesc:
-        "실시간 정보 공유를 위한 국방 모바일 환경 신뢰 연동 기술 개발 내 네트워크 모니터링을 위한 관리 시스템",
+        "실시간 정보 공유를 위한 국방 모바일 환경 신뢰 연동 기술 개발 내<br/>네트워크 모니터링을 위한 관리 시스템",
       role: "퍼블리싱 100%  디자인 100%",
       date: "2025.04. ~ 2025.06.", //기간
       count: 6, //참여인원
@@ -108,7 +108,7 @@ export default function Tabs() {
       title: "e학습터 서비스",
       mainDesc: "e학습터 서비스 구조 개선 사업", // 메인텍스트
       subDesc:
-        "e학습터 서비스의 MSA 구조 전환에 따른 vue.js 프레임워크 내 퍼블리싱 작업",
+        "e학습터 서비스의 MSA 구조 전환에 따른<br/>vue.js 프레임워크 내 퍼블리싱 작업",
       role: "퍼블리싱 100%",
       date: "2024.07. ~ 2024.12.", //기간
       count: 18, //참여인원
@@ -138,13 +138,14 @@ export default function Tabs() {
       contList: [
         // 주요내용
         "JSP 내 HTML을 Vue.js 템플릿 구조로 변환",
-        "공통 레이아웃 및 페이지 퍼블리싱 작업",
+        "공통 레이아웃 및 메인 페이지 작업",
         "문제은행 관리페이지(리뉴얼) 퍼블리싱 작업",
         "신규 라이브러리 적용 (chart.js, sweetalert2, vue-draggable-next, swiper.js)",
         "라이브러리의 컴포넌트화 (datepicker 등)",
       ],
       strength: [
         "Vue.js 환경에 맞는 라이브러리로 전환하여 안정성 개선",
+        "템플릿페이지를 통해~~~ ",
         "공통된 UI의 컴포넌트 작업을 통해 재사용성 증진",
       ], //역량
     },
@@ -153,7 +154,7 @@ export default function Tabs() {
       id: 4,
       title: "다비치마켓",
       mainDesc: "다비치마켓 쇼핑몰 리뉴얼 및 기능 개선", // 메인텍스트
-      subDesc: "nuxt.js 프레임워크를 활용하여 쇼핑몰 퍼블리싱 및 개발 진행",
+      subDesc: "nuxt.js 프레임워크를 활용하여<br/>쇼핑몰 퍼블리싱 및 개발 진행",
       role: "퍼블리싱 60% 개발 10%",
       date: "2022.06. ~ 2023.11.", //기간
       count: 8, //참여인원
@@ -174,11 +175,215 @@ export default function Tabs() {
         "다비치 마켓 앱(하이브리드 앱)에 적용되는 웹뷰 작업",
         "SCSS 사용 및 BEM 방법론 적용",
         "상품랭킹페이지 등 일부 페이지 데이터 API 적용",
-        "협업 툴(Postman, Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+      
       ],
       strength: [
         "BEM 방법론 사용으로 클래스 네이밍을 통일하여 협업 효율 향상",
         "반응형 및 크로스 브라우징을 통한 웹 호환성 확보",
+      ], //역량
+    },
+    {
+      type: "project", //"sideProject",
+      id: 5,
+      title: "다비치안경체인",
+      mainDesc: "다비치안경체인 웹사이트 신규 구축", // 메인텍스트
+      subDesc: "다비치안경체인 회사의 소개 사이트/관리자페이지의 퍼블리싱<br/>및 유지보수 진행",
+      role: "퍼블리싱 70%",
+      date: "2022.11. ~ 2023.04.", //기간
+      count: 6, //참여인원
+      link: [
+        // 링크
+        {
+          linkttl: "다비치안경체인",
+          link: "https://davich.com/",
+        },
+      ],
+      image: "/images/screenshot/davich_01.png", // 썸네일
+      imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
+      imageAlt: "다비치안경체인 사이트 썸네일",
+      tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
+      contList: [
+        // 주요내용
+        "공통 컴포넌트 및 페이지 퍼블리싱",
+        "관리자 페이지 퍼블리싱",
+        "SCSS 사용",
+        "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+        "사이트 유지보수 시 데이터 API 맵핑",
+        "페이지에 최적화 하기위해 적응형 작업"
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
+    {
+      type: "project", //"sideProject",
+      id: 6,
+      title: "피팅몬스터 콘택트렌즈 CMS",
+      mainDesc: "피팅몬스터 콘택트렌즈 CMS", // 메인텍스트
+      subDesc: "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
+      role: "퍼블리싱 70%",
+      date: "2022.06. ~ 2023.11.", //기간
+      count: 8, //참여인원
+      // link: [
+      //   // 링크
+      //   {
+      //     linkttl: "다비치안경체인",
+      //     link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
+      //   },
+      // ],
+      image: "/images/screenshot/davich_01.png", // 썸네일
+      imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
+      imageAlt: "다비치안경체인 사이트 썸네일",
+      tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
+      contList: [
+        // 주요내용
+        "공통 컴포넌트 및 페이지 퍼블리싱",
+        "관리자 페이지 퍼블리싱",
+        "SCSS 사용",
+        "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+        "사이트 유지보수 시 데이터 API 맵핑",
+        "페이지에 최적화 하기위해 적응형 작업"
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
+    {
+      type: "project", //"sideProject",
+      id: 7,
+      title: "렌즈톡톡 쇼핑몰",
+      mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
+      subDesc: "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
+      role: "퍼블리싱 70%",
+      date: "2022.06. ~ 2023.11.", //기간
+      count: 8, //참여인원
+      link: [
+        // 링크
+        {
+          linkttl: "다비치안경체인",
+          link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
+        },
+      ],
+      image: "/images/screenshot/davich_01.png", // 썸네일
+      imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
+      imageAlt: "다비치안경체인 사이트 썸네일",
+      tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
+      contList: [
+        // 주요내용
+        "공통 컴포넌트 및 페이지 퍼블리싱",
+        "관리자 페이지 퍼블리싱",
+        "SCSS 사용",
+        "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+        "사이트 유지보수 시 데이터 API 맵핑",
+        "페이지에 최적화 하기위해 적응형 작업"
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
+    // {
+    //   type: "sideProject", //"sideProject",
+    //   id: 8,
+    //   title: "오늘의 여행",
+    //   mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
+    //   subDesc: "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
+    //   role: "퍼블리싱 100% 디자인 100%",
+    //   date: "2025.01. ~ 2025.08.", //기간
+    //   count: 4, //참여인원
+    //   link: [
+    //     // 링크
+    //     {
+    //       linkttl: "다비치안경체인",
+    //       link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
+    //     },
+    //   ],
+    //   image: "/images/screenshot/davich_01.png", // 썸네일
+    //   imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
+    //   imageAlt: "다비치안경체인 사이트 썸네일",
+    //   tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
+    //   contList: [
+    //     // 주요내용
+    //     "공통 컴포넌트 및 페이지 퍼블리싱",
+    //     "관리자 페이지 퍼블리싱",
+    //     "SCSS 사용",
+    //     "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+    //     "사이트 유지보수 시 데이터 API 맵핑",
+    //     "페이지에 최적화 하기위해 적응형 작업"
+    //   ],
+    //   strength: [
+    //     "다양한 협업툴을 통해 협업경험 및 ~~~",
+    //     "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+    //   ], //역량
+    // },
+    {
+      type: "sideProject", //"sideProject",
+      id:9,
+      title: "렌즈톡톡 쇼핑몰",
+      mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
+      subDesc: "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
+      role: "퍼블리싱 70%",
+      date: "2022.06. ~ 2023.11.", //기간
+      count: 8, //참여인원
+      link: [
+        // 링크
+        {
+          linkttl: "다비치안경체인",
+          link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
+        },
+      ],
+      image: "/images/screenshot/davich_01.png", // 썸네일
+      imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
+      imageAlt: "다비치안경체인 사이트 썸네일",
+      tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
+      contList: [
+        // 주요내용
+        "공통 컴포넌트 및 페이지 퍼블리싱",
+        "관리자 페이지 퍼블리싱",
+        "SCSS 사용",
+        "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+        "사이트 유지보수 시 데이터 API 맵핑",
+        "페이지에 최적화 하기위해 적응형 작업"
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
+    {
+      type: "sideProject", //"sideProject",
+      id: 10,
+      title: "렌즈톡톡 쇼핑몰",
+      mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
+      subDesc: "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
+      role: "퍼블리싱 70%",
+      date: "2022.06. ~ 2023.11.", //기간
+      count: 8, //참여인원
+      link: [
+        // 링크
+        {
+          linkttl: "다비치안경체인",
+          link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
+        },
+      ],
+      image: "/images/screenshot/davich_01.png", // 썸네일
+      imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
+      imageAlt: "다비치안경체인 사이트 썸네일",
+      tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
+      contList: [
+        // 주요내용
+        "공통 컴포넌트 및 페이지 퍼블리싱",
+        "관리자 페이지 퍼블리싱",
+        "SCSS 사용",
+        "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
+        "사이트 유지보수 시 데이터 API 맵핑",
+        "페이지에 최적화 하기위해 적응형 작업"
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
       ], //역량
     },
   ];

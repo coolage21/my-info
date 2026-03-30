@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "코딩에이지 포트폴리오",
     images: [
       {
-        url: "https://my-info-lake.vercel.app/ko/images/screenshot/copyright_01",
+        url: "https://my-info-lake.vercel.app/images/screenshot/copyright_01.png",
         width: 1200,
         height: 630,
       },
