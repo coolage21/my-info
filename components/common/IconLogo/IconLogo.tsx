@@ -20,7 +20,7 @@ export default function IconLogo({
   img,
   width,
   height,
-  fill = "false",
+  fill = false,
   desc,
 }: IconLogoProps) {
   return (
