@@ -12,14 +12,21 @@ import { setRequestLocale } from "next-intl/server";
 
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
-  title: '최하혜 포트폴리오', // 브라우저 탭에 표시될 이름
-  description: '웹 퍼블리셔 최하혜 포트폴리오 사이트',
-  keywords: ['웹퍼블리셔','웹퍼블리싱','프론트엔드','개발자','웹접근성','웹표준형','퍼블리셔 포트폴리오','경력 퍼블리셔 포트폴리오'],
+  title: "최하혜 포트폴리오", // 브라우저 탭에 표시될 이름
+  description: "웹 퍼블리셔 최하혜 포트폴리오 사이트",
+  keywords: [
+    "웹퍼블리셔",
+    "웹퍼블리싱",
+    "프론트엔드",
+    "개발자",
+    "웹접근성",
+    "웹표준형",
+    "퍼블리셔 포트폴리오",
+    "경력 퍼블리셔 포트폴리오",
+  ],
   openGraph: {
     title: "최하혜의 포트폴리오",
     description: "안녕하십니까. 웹 퍼블리셔 최하혜의 포트폴리오 사이트입니다.",
@@ -35,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: '/favicon.svg', // public/favicon.svg 경로 (없으면 .ico나 .png도 가능)
+    icon: "/favicon.svg", // public/favicon.svg 경로 (없으면 .ico나 .png도 가능)
   },
 };
 
