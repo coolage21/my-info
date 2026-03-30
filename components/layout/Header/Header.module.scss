@@ -36,15 +36,15 @@
   &__link {
     display: block;
     position: relative;
-    width: 268px;
-    height: 46px;
+    width: 134px;
+    height: 23px;
     overflow: hidden;
     img {
       position: absolute;
       top:0;
-      left:0;
-      height: 46px;
-      width: 536px;
+      left:var(--img-left);
+      height: 23px;
+      width: 268px;
       max-width: 200%;
     }
   }

@@ -39,29 +39,13 @@ body {
   --gray-color: #f8f8f8;
   --silver-color: #000000;
   --lightgray-color: #161616;
-  .icon {
-      &--black {
-        left: -100% !important;
-        &__wrapper {
-        }
-      }
-  }
-  .close-btn {
-    img {
-      left: -100%;
-    }
-  }
-  .logo__link {
-    img {
-        left: -100%;
-    }
-  }
+  --img-left: -100%;
 }
 .icon {
     &--black {
       position: absolute;
       top:0;
-      left:0;
+      left:var(--img-left);
       height: 16px;
       width: 32px;
       max-width: 200%;
