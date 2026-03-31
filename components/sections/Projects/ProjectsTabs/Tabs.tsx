@@ -82,11 +82,11 @@ export default function Tabs() {
       //     link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
       //   },
       // ],
-      image: "/images/screenshot/copyright_01.png", // 썸네일
+      image: "/images/screenshot/nexus_01.png", // 썸네일
       imageList: [
-        "/images/screenshot/copyright_01.png",
-        "/images/screenshot/copyright_02.png",
-        "/images/screenshot/copyright_03.png",
+        "/images/screenshot/nexus_01.png",
+        "/images/screenshot/nexus_02.png",
+        "/images/screenshot/nexus_03.png",
       ],
       imageAlt: "nexus 메인페이지 썸네일",
       tool: ["html", "css", "js", "vue", "figma", "zeplin"], // 기술스택
