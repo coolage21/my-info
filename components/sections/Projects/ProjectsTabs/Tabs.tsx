@@ -140,7 +140,7 @@ export default function Tabs() {
         "JSP 기반 마크업을 Vue 컴포넌트 구조로 전환",
         "공통 레이아웃 및 메인 페이지 작업",
         "문제은행 관리페이지(리뉴얼) 퍼블리싱 작업",
-        "vue 환경에 맞는 라이브러리 적용 (chart.js, sweetalert2 등)",
+        "vue 환경에 맞는 라이브러리 적용 (vue-draggable-next, sweetalert2 등)",
         "라이브러리의 컴포넌트화 (datepicker 등)",
       ],
       strength: [
@@ -200,7 +200,7 @@ export default function Tabs() {
       title: "다비치안경체인",
       mainDesc: "다비치안경체인 웹사이트 신규 구축", // 메인텍스트
       subDesc:
-        "다비치안경체인 회사의 소개 사이트 및 관리자 페이지의 퍼블리싱<br/>/유지보수 진행",
+        "다비치안경체인 회사의 소개 사이트 및<br/>관리자 페이지의 퍼블리싱/유지보수",
       role: "퍼블리싱 70%",
       date: "2021.11. ~ 2022.04.", //기간
       count: 6, //참여인원
@@ -245,7 +245,7 @@ export default function Tabs() {
       id: 6,
       title: "피팅몬스터 콘택트렌즈 CMS",
       mainDesc: "자사솔루션 피팅몬스터 콘택트렌즈의 CMS", // 메인텍스트
-      subDesc: "자사 가상피팅API가 탑재된 태블릿에 담긴 CMS UI 개발",
+      subDesc: "자사 가상피팅API 사용 및관리를 위한<br/>CMS UI 개발",
       role: "퍼블리싱 80% 개발 10%",
       date: "2022.04. ~ 2022.06.", //기간
       count: 6, //참여인원
@@ -278,7 +278,7 @@ export default function Tabs() {
       id: 7,
       title: "렌즈톡톡 쇼핑몰",
       mainDesc: "자사 영문 쇼핑몰 사이트 구축", // 메인텍스트
-      subDesc: "카페24의 템플릿을 활용하여 자사 영문 렌즈 쇼핑몰 구축 작업",
+      subDesc: "카페24의 템플릿을 활용하여 <br/>자사 영문 렌즈 쇼핑몰 구축 작업",
       role: "퍼블리싱 100%",
       date: "2021.09. ~ 2021.10.", //기간
       count: 3, //참여인원

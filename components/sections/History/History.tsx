@@ -33,7 +33,7 @@ export default function History() {
               </div>
             </li>
             <li className={cx("history__list")}>
-              <em>2021. 09 ~ 2024. 12</em>
+              <em>2021. 09 ~ 2023. 12</em>
               <span>
                 (주)인터비젼 <strong>웹 퍼블리셔</strong>
               </span>
