@@ -162,7 +162,7 @@ export default function Tabs() {
       link: [
         // 링크
         {
-          linkttl: "다비치마켓",
+          linkttl: "다비치마켓 바로가기",
           link: "https://www.davichmarket.com/",
         },
       ],
@@ -207,14 +207,14 @@ export default function Tabs() {
       link: [
         // 링크
         {
-          linkttl: "다비치안경체인",
+          linkttl: "다비치안경체인 바로가기",
           link: "https://davich.com/",
         },
       ],
       image: "/images/screenshot/davich_01.png", // 썸네일
       imageList: [
         "/images/screenshot/davich_01.png",
-        "/images/screenshot/dmarket_02.png",
+        "/images/screenshot/davich_02.png",
       ],
       imageAlt: "다비치안경체인 사이트 썸네일",
       tool: [
@@ -306,134 +306,118 @@ export default function Tabs() {
         "api 적용 경험",
       ], //역량
     },
-    // {
-    //   type: "sideProject", //"sideProject",
-    //   id: 8,
-    //   title: "오늘의 여행",
-    //   mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
-    //   subDesc: "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
-    //   role: "퍼블리싱 100% 디자인 100%",
-    //   date: "2025.01. ~ 2025.08.", //기간
-    //   count: 4, //참여인원
-    //   link: [
-    //     // 링크
-    //     {
-    //       linkttl: "다비치안경체인",
-    //       link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
-    //     },
-    //   ],
-    //   image: "/images/screenshot/davich_01.png", // 썸네일
-    //   imageList: ["/images/screenshot/davich_01.png", "/images/screenshot/dmarket_02.png"],
-    //   imageAlt: "다비치안경체인 사이트 썸네일",
-    //   tool: ["html","scss", "javascript", "vue", "git", "sourcetree", "zeplin", "postman"], // 기술스택
-    //   contList: [
-    //     // 주요내용
-    //     "공통 컴포넌트 및 페이지 퍼블리싱",
-    //     "관리자 페이지 퍼블리싱",
-    //     "SCSS 사용",
-    //     "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
-    //     "사이트 유지보수 시 데이터 API 맵핑",
-    //     "페이지에 최적화 하기위해 적응형 작업"
-    //   ],
-    //   strength: [
-    //     "다양한 협업툴을 통해 협업경험 및 ~~~",
-    //     "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
-    //   ], //역량
-    // },
-    // {
-    //   type: "sideProject", //"sideProject",
-    //   id: 9,
-    //   title: "렌즈톡톡 쇼핑몰",
-    //   mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
-    //   subDesc:
-    //     "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
-    //   role: "퍼블리싱 70%",
-    //   date: "2022.06. ~ 2023.11.", //기간
-    //   count: 8, //참여인원
-    //   link: [
-    //     // 링크
-    //     {
-    //       linkttl: "다비치안경체인",
-    //       link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
-    //     },
-    //   ],
-    //   image: "/images/screenshot/davich_01.png", // 썸네일
-    //   imageList: [
-    //     "/images/screenshot/davich_01.png",
-    //     "/images/screenshot/dmarket_02.png",
-    //   ],
-    //   imageAlt: "다비치안경체인 사이트 썸네일",
-    //   tool: [
-    //     "html",
-    //     "scss",
-    //     "js",
-    //     "vue",
-    //     "git",
-    //     "sourcetree",
-    //     "zeplin",
-    //     "postman",
-    //   ], // 기술스택
-    //   contList: [
-    //     // 주요내용
-    //     "공통 컴포넌트 및 페이지 퍼블리싱",
-    //     "관리자 페이지 퍼블리싱",
-    //     "SCSS 사용",
-    //     "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
-    //     "사이트 유지보수 시 데이터 API 맵핑",
-    //     "페이지에 최적화 하기위해 적응형 작업",
-    //   ],
-    //   strength: [
-    //     "다양한 협업툴을 통해 협업경험 및 ~~~",
-    //     "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
-    //   ], //역량
-    // },
-    // {
-    //   type: "sideProject", //"sideProject",
-    //   id: 10,
-    //   title: "렌즈톡톡 쇼핑몰",
-    //   mainDesc: "렌즈톡톡 쇼핑몰 사이트 구축", // 메인텍스트
-    //   subDesc:
-    //     "다비치안경체인 회사의 소개 웹사이트/관리자페이지의 퍼블리싱 및 유지보수 진행",
-    //   role: "퍼블리싱 70%",
-    //   date: "2022.06. ~ 2023.11.", //기간
-    //   count: 8, //참여인원
-    //   link: [
-    //     // 링크
-    //     {
-    //       linkttl: "다비치안경체인",
-    //       link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
-    //     },
-    //   ],
-    //   image: "/images/screenshot/davich_01.png", // 썸네일
-    //   imageList: [
-    //     "/images/screenshot/davich_01.png",
-    //     "/images/screenshot/dmarket_02.png",
-    //   ],
-    //   imageAlt: "다비치안경체인 사이트 썸네일",
-    //   tool: [
-    //     "html",
-    //     "scss",
-    //     "js",
-    //     "vue",
-    //     "git",
-    //     "sourcetree",
-    //     "zeplin",
-    //     "postman",
-    //   ], // 기술스택
-    //   contList: [
-    //     // 주요내용
-    //     "공통 컴포넌트 및 페이지 퍼블리싱",
-    //     "관리자 페이지 퍼블리싱",
-    //     "SCSS 사용",
-    //     "협업 툴(Zeplin, Git)을 활용하여 개발자 및 디자이너와 협업 진행",
-    //     "사이트 유지보수 시 데이터 API 맵핑",
-    //     "페이지에 최적화 하기위해 적응형 작업",
-    //   ],
-    //   strength: [
-    //     "다양한 협업툴을 통해 협업경험 및 ~~~",
-    //     "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
-    //   ], //역량
-    // },
+    {
+      type: "sideProject", //"sideProject",
+      id: 8,
+      title: "오늘의 여행 (사이드 프로젝트)",
+      mainDesc: "여행사이트 구축 프로젝트", // 메인텍스트
+      subDesc: "관광지 소개 및 여행 루트 업로드,<br/>여행단 모집을 위한 채팅을 포함한 참여형 웹사이트",
+      role: "퍼블리싱 100% 디자인 100% 개발 20%",
+      date: "2025.01. ~ 2025.08.", //기간
+      count: 4, //참여인원
+      // link: [
+      //   // 링크
+      //   {
+      //     linkttl: "다비치안경체인",
+      //     link: "https://edu-copyright.or.kr/dsprUser/main/main.do",
+      //   },
+      // ],
+      image: "/images/screenshot/travel_01.png", // 썸네일
+      imageList: ["/images/screenshot/travel_01.png", "/images/screenshot/travel_02.png"],
+      imageAlt: "오늘의 여행 사이트 썸네일",
+      tool: ["html","css", "js", "react", "figma", "git", "sourcetree", "zeplin"], // 기술스택
+      contList: [
+        // 주요내용
+        "피그마를 이용하여 UI/UX 설계",
+        "React UI 컴포넌트 작업 및 반응형 레이아웃 구현",
+        "검색·프로모션·메인 화면 데이터 API 적용",
+        // "화면설계서 부터 "
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
+    {
+      type: "sideProject", //"sideProject",
+      id: 9,
+      title: "나만의 배경화면 만들기(사이트 프로젝트)",
+      mainDesc: "배경 이미지를 생성하는 사이트", // 메인텍스트
+      subDesc:
+        "가지고 있는 이미지나 pixabay의 무료 이미지로 ppt, 배경이미지를<br/>간단하게 제작하는 사이트입니다.",
+      role: "퍼블리싱/디자인/개발 100%",
+      date: "2025.12. ~ 2026.1.", //기간
+      count: 1, //참여인원
+      link: [
+        // 링크
+        {
+          linkttl: "나만의 배경화면 만들기 바로가기",
+          link: "https://wallpaper-edit.pages.dev/",
+        },
+      ],
+      image: "/images/screenshot/wallpaper_01.png", // 썸네일
+      imageList: [
+        "/images/screenshot/wallpaper_01.png",
+      ],
+      imageAlt: "나만의 배경화면 만들기 사이트 썸네일",
+      tool: ["html","css", "js", "vue", "figma", "git", "sourcetree", "zeplin"
+      ], // 기술스택
+      contList: [
+        // 주요내용
+        "피그마로 UI/UX 설계",
+        "nuxt4에서 페이지 퍼블리싱 및 이미지 에디터 기능 구현",
+        "이미지 api(pixabay api), 성경 api(bible api) 연동",
+        "웹표준형(W3C Markup Validation Service), 웹접근성 진단 툴(OpenWAX)을 통한 점검 시행",
+        "SEO를 위한 사이트 최적화",
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
+    {
+      type: "sideProject", //"sideProject",
+      id: 10,
+      title: "최하혜의 포트폴리오",
+      mainDesc: "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오", // 메인텍스트
+      subDesc:
+        "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오",
+      role: "퍼블리싱/디자인/개발 100%",
+      date: "2026.03. ~ ", //기간
+      count: 1, //참여인원
+      // link: [
+      //   // 링크
+      //   {
+      //     linkttl: "사이트 바로가기",
+      //     link: "",
+      //   },
+      // ],
+      image: "/images/screenshot/img_main.png", // 썸네일
+      imageList: [
+        "/images/screenshot/img_main.png",
+       
+      ],
+      imageAlt: "포트폴리오 사이트 썸네일",
+      tool: [
+        "html",
+        "scss",
+        "js",
+        "react",
+        "figma",
+        "git",
+        "zeplin",
+      ], // 기술스택
+      contList: [
+        // 주요내용
+        "next.js 프레임워크를 활용하여 퍼블리싱, 반응형 작업",
+        "웹 접근성을 고려하여 다크 모드, 폰트 크기 설정 기능",
+        "크로스 브라우징 이슈 대응", //(10vh, 파이어 폭스)
+      ],
+      strength: [
+        "다양한 협업툴을 통해 협업경험 및 ~~~",
+        "다양한 스크롤이벤트 페이지의 작업으로 인터렉션 구현 경험",
+      ], //역량
+    },
   ];
   // 현재 체크된 카테고리(클릭시 변경됨으로 useState)
   const [checkedCategory, setCheckedCategory] = useState("all");

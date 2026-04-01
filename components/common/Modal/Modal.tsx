@@ -21,6 +21,7 @@ interface ModalProps {
     | "contList"
     | "strength"
     | "imageList"
+    | "imageAlt"
   >; // 특정항목만 불러오기
   // user: Omit<User, "email">; // 특정항목만 빼기
   // user: Partial<User>; // 전부 선택적
@@ -129,7 +130,7 @@ export default function Modal({ open, user, onClose }: ModalProps) {
               </div> */}
               <div className={cx("modal__img-wrapper")}>
                 {user.imageList.map((imageList) => (
-                  <img src={imageList} alt="" />
+                  <img src={imageList} alt={imageAlt} />
                 ))}
               </div>
             </div>
