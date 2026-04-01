@@ -15,14 +15,14 @@ export default function Introduction() {
       <h2 className="sc-only">Introduction</h2>
       <div>
         <h2 className={cx("introduction__ttl")}>
-          <p>
+          <span className={cx("introduction__ttl-inner")}>
             {/* {t("title")} */}
             <b> 탄탄한 구조</b> 위에
-          </p>
-          <p>
+          </span>
+          <span className={cx("introduction__ttl-inner")}>
             <b>완성도</b>를 쌓아가는,
-          </p>
-          <p>웹 퍼블리셔</p>
+          </span>
+          <span className={cx("introduction__ttl-inner")}>웹 퍼블리셔</span>
         </h2>
         <div className={cx("introduction__about")}>
           <p>유지보수를 고려한 컴포넌트 설계를 지향하며, </p>

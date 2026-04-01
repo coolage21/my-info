@@ -12,7 +12,7 @@ export default function Strength() {
         <li className={cx("strength__card")}>
           <h3 className={cx("strength__ttl", "sub-ttl")}>웹표준 준수</h3>
           <p className={cx("strength__desc")}>
-            w3c에서 권장하는 웹표준을 준수하여 코딩합니다.
+            W3C에서 권장하는 웹표준을 준수하여 코딩합니다.
           </p>
           <p className={cx("strength__desc")}>
             시맨틱 태그를 사용하여 구조를 설계하고 의미를 명확하게 전달합니다.

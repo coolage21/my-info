@@ -24,16 +24,16 @@ export default function Card({
   imgAlt,
 }: CardProps) {
   return (
-    <div className={cx("card", `card--${size}`)}>
+    <span className={cx("card", `card--${size}`)}>
       {img && (
-        <div className={cx("card__img-wrapper")}>
+        <span className={cx("card__img-wrapper")}>
           <Image src={img} alt={imgAlt} width={351} height={200} quality={100}/>
-        </div>
+        </span>
       )}
       {title && <p className={cx("card__ttl")}>{title}</p>}
       {desc && <p className={cx("card__desc")}>{desc}</p>}
       {role && <p className={cx("card__role")}>{role}</p>}
       {/* {badge && <p className="">{badge}</p>} */}
-    </div>
+    </span>
   );
 }

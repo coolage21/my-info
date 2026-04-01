@@ -7,9 +7,10 @@
   &__ttl {
     margin-bottom: 20px;
     font-size: calc(var(--text-xxxl) * var(--font-scale));
-
     font-weight: 400;
-    b {
+    &-inner {
+      display: block;
+    }    b {
       font-weight: 700;
     }
   }

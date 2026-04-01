@@ -15,9 +15,9 @@ export default function TabButton({ title, size }: TabButtonProps) {
   return (
     <div className={cx("heading")}>
       <h2 className={cx("heading__ttl", `heading__ttl--${size}`)}>
-        <div className={cx("heading__img")}>
+        <span className={cx("heading__img")}>
           <img src="/images/icon_logo.png" alt="" />
-        </div>
+        </span>
         {title}
       </h2>
     </div>

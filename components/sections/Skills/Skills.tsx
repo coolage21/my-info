@@ -63,7 +63,7 @@ export default function Skills() {
             <p>Github, Postman, Zeplin을 통한 협업</p>
             <p>VSCode 에디터 사용 및 다양한 확장 기능 활용</p>
           </div>
-          <ul className={cx("icon__wrapper")}>
+          <div className={cx("icon__wrapper")}>
             <IconLogo
               img={"/images/icons/icon_git.png"}
               imgAlt={"git"}
@@ -95,7 +95,7 @@ export default function Skills() {
               width={34}
               height={34}
             />
-          </ul>
+          </div>
         </li>
         <li className={cx("skills__list")}>
           <h3 className={cx("skills__ttl")}>디자인</h3>
@@ -103,7 +103,7 @@ export default function Skills() {
             <p>피그마를 활용한 디자인 작업</p>
             <p>UI 리소스 작업</p>
           </div>
-          <ul className={cx("icon__wrapper")}>
+          <div className={cx("icon__wrapper")}>
             <IconLogo
               img={"/images/icons/icon_xd.png"}
               imgAlt={"xd"}
@@ -132,7 +132,7 @@ export default function Skills() {
               height={45}
               fill={true}
             />
-          </ul>
+          </div>
         </li>
       </ul>
     </section>
