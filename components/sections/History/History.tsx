@@ -21,14 +21,14 @@ export default function History() {
                 <ul className={cx("history__main-cont")}>
                   <li>
                     {/* 페이지 UI 개발:  */}
-                    화면 레이아웃과 UI 구현
+                    웹표준 기반의 마크업 및 화면 레이아웃 설계
                   </li>
                   <li>
                     {/* 컴포넌트 적용:  */}
-                    공통 UI 컴포넌트 활용
+                    재사용성을 고려한 공통 UI 컴포넌트 모듈화
                   </li>
-                  <li>KWCAG 기준에 맞춰 접근성 점검 및 개선</li>
-                  <li>다양한 디바이스 별 최적화를 위한 반응형 작업</li>
+                  <li> 다양한 디바이스에 최적화된 반응형 웹 구현</li>
+                  <li>KWCAG 기준에 맞춘 접근성 점검 및 개선</li>
                 </ul>
               </div>
             </li>
@@ -41,7 +41,7 @@ export default function History() {
             <li className={cx("history__list")}>
               <em>2020. 01 ~ 2020. 08</em>
               <span>
-                (주)와우프레스 <strong>웹 템플릿 제작</strong>
+                (주)와우프레스 <strong>디자인 템플릿 제작</strong>
               </span>
             </li>
             <li className={cx("history__list")}>

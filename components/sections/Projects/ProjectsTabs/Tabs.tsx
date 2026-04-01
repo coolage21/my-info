@@ -21,7 +21,7 @@ export default function Tabs() {
       title: "저작권 배움터/e배움터",
       mainDesc: "한국저작권위원회 교육시스템 기능개선 사업", // 메인텍스트
       subDesc:
-        "저작권배움터 교육시스템 기능개선사업의 UX 개발 및<br/>웹접근성 인증마크 획득을 위한 코드개선",
+        "저작권배움터 교육시스템 기능개선사업의 UI 개발 및<br/>웹접근성 인증마크 획득을 위한 코드 개선",
       role: "퍼블리싱 100%  디자인 30%",
       date: "2025.04. ~ 2025.11.", //기간
       count: 6, //참여인원
@@ -49,10 +49,10 @@ export default function Tabs() {
       imageAlt: "저작권배움터 메인페이지 썸네일",
       tool: ["html", "css", "js", "figma", "zeplin"], // 기술스택
       contList: [
-        // 주요내용
-        "웹접근성 진단 툴(OpenWAX)을 활용한 점검 및 마크업 개선",
-        "기존 저작권e배움터 UI를 반영한 저작권배움터 메인 UI 개선 및 퍼블리싱",
+        "기존 저작권e배움터 UI를 반영한 저작권배움터 메인 UI 개발 및 퍼블리싱",
         "기능 개선 페이지 퍼블리싱",
+        "웹접근성 진단 툴(OpenWAX)을 활용한 웹접근성 점검",
+        // 주요내용
         "모바일 레이아웃 깨짐 이슈 수정",
       ],
       strength: ["웹접근성 인증마크 갱신/획득 경험"], //역량
@@ -64,7 +64,7 @@ export default function Tabs() {
       mainDesc: "네트워크 모니터링 관리 시스템", // 메인텍스트
       subDesc:
         "실시간 정보 공유를 위한 국방 모바일 환경 신뢰 연동 기술 개발 내<br/>네트워크 모니터링을 위한 관리 시스템",
-      role: "퍼블리싱 100%  디자인 100%",
+      role: "퍼블리싱/디자인 100%",
       date: "2025.04. ~ 2025.06.", //기간
       count: 6, //참여인원
       // link: [
@@ -93,7 +93,7 @@ export default function Tabs() {
       contList: [
         // 주요내용
         "Figma를 활용한 UI 디자인",
-        "Zeplin 기준 퍼블리싱 및 컴포넌트 구현",
+        "Zeplin 기준 화면 퍼블리싱 및 컴포넌트 구현",
         "이미지맵이 아닌 SVG로 이미지 적용 및 반응형, 상호작용 구현",
         "스켈레톤 UI를 활용한 로딩 화면 구성",
       ],
@@ -108,7 +108,7 @@ export default function Tabs() {
       title: "e학습터 서비스",
       mainDesc: "e학습터 서비스 구조 개선 사업", // 메인텍스트
       subDesc:
-        "e학습터 서비스의 MSA 구조 전환에 따른<br/>vue.js 프레임워크 내 퍼블리싱 작업",
+        "e학습터 서비스의 MSA 구조 전환에 따른<br/>Vue.js 프레임워크 내 퍼블리싱 작업",
       role: "퍼블리싱 100%",
       date: "2024.07. ~ 2024.12.", //기간
       count: 18, //참여인원
@@ -140,11 +140,11 @@ export default function Tabs() {
         "JSP 기반 마크업을 Vue 컴포넌트 구조로 전환",
         "공통 레이아웃 및 메인 페이지 작업",
         "문제은행 관리페이지(리뉴얼) 퍼블리싱 작업",
-        "vue 환경에 맞는 라이브러리 적용 (vue-draggable-next, sweetalert2 등)",
+        "Vue 환경에 맞는 라이브러리 적용 (vue-draggable-next, sweetalert2 등)",
         "라이브러리의 컴포넌트화 (datepicker 등)",
       ],
       strength: [
-        "Vue.js 환경에 맞는 라이브러리로 전환하여 안정성 개선",
+        "Vue 환경에 맞는 라이브러리로 전환하여 안정성 개선",
         "템플릿페이지를 통해~~~ ",
         "공통된 UI의 컴포넌트 작업을 통해 재사용성 증진",
       ], //역량
@@ -278,7 +278,8 @@ export default function Tabs() {
       id: 7,
       title: "렌즈톡톡 쇼핑몰",
       mainDesc: "자사 영문 쇼핑몰 사이트 구축", // 메인텍스트
-      subDesc: "카페24의 템플릿을 활용하여 <br/>자사 영문 렌즈 쇼핑몰 구축 작업",
+      subDesc:
+        "카페24의 템플릿을 활용하여 <br/>자사 영문 렌즈 쇼핑몰 구축 작업",
       role: "퍼블리싱 100%",
       date: "2021.09. ~ 2021.10.", //기간
       count: 3, //참여인원
@@ -309,10 +310,11 @@ export default function Tabs() {
     {
       type: "sideProject", //"sideProject",
       id: 8,
-      title: "오늘의 여행 (사이드 프로젝트)",
+      title: "오늘의 여행(사이드 프로젝트)",
       mainDesc: "여행사이트 구축 프로젝트", // 메인텍스트
-      subDesc: "관광지 소개 및 여행 루트 업로드,<br/>여행단 모집을 위한 채팅을 포함한 참여형 웹사이트",
-      role: "퍼블리싱 100% 디자인 100% 개발 20%",
+      subDesc:
+        "관광지 소개 및 여행 루트 업로드,<br/>여행단 모집을 위한 채팅을 포함한 참여형 웹사이트",
+      role: "퍼블리싱/디자인 100% 개발 20%",
       date: "2025.01. ~ 2025.08.", //기간
       count: 4, //참여인원
       // link: [
@@ -323,9 +325,21 @@ export default function Tabs() {
       //   },
       // ],
       image: "/images/screenshot/travel_01.png", // 썸네일
-      imageList: ["/images/screenshot/travel_01.png", "/images/screenshot/travel_02.png"],
+      imageList: [
+        "/images/screenshot/travel_01.png",
+        "/images/screenshot/travel_02.png",
+      ],
       imageAlt: "오늘의 여행 사이트 썸네일",
-      tool: ["html","css", "js", "react", "figma", "git", "sourcetree", "zeplin"], // 기술스택
+      tool: [
+        "html",
+        "css",
+        "js",
+        "react",
+        "figma",
+        "git",
+        "sourcetree",
+        "zeplin",
+      ], // 기술스택
       contList: [
         // 주요내용
         "피그마를 이용하여 UI/UX 설계",
@@ -356,17 +370,23 @@ export default function Tabs() {
         },
       ],
       image: "/images/screenshot/wallpaper_01.png", // 썸네일
-      imageList: [
-        "/images/screenshot/wallpaper_01.png",
-      ],
+      imageList: ["/images/screenshot/wallpaper_01.png"],
       imageAlt: "나만의 배경화면 만들기 사이트 썸네일",
-      tool: ["html","css", "js", "vue", "figma", "git", "sourcetree", "zeplin"
+      tool: [
+        "html",
+        "css",
+        "js",
+        "vue",
+        "figma",
+        "git",
+        "sourcetree",
+        "zeplin",
       ], // 기술스택
       contList: [
         // 주요내용
         "피그마로 UI/UX 설계",
-        "nuxt4에서 페이지 퍼블리싱 및 이미지 에디터 기능 구현",
-        "이미지 api(pixabay api), 성경 api(bible api) 연동",
+        "nuxt.js에서 페이지 퍼블리싱 및 이미지 에디터 기능 구현",
+        "이미지 API(Pixabay API), 성경 API(bible API) 연동",
         "웹표준형(W3C Markup Validation Service), 웹접근성 진단 툴(OpenWAX)을 통한 점검 시행",
         "SEO를 위한 사이트 최적화",
       ],
@@ -380,8 +400,7 @@ export default function Tabs() {
       id: 10,
       title: "최하혜의 포트폴리오",
       mainDesc: "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오", // 메인텍스트
-      subDesc:
-        "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오",
+      subDesc: "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오",
       role: "퍼블리싱/디자인/개발 100%",
       date: "2026.03. ~ ", //기간
       count: 1, //참여인원
@@ -393,20 +412,9 @@ export default function Tabs() {
       //   },
       // ],
       image: "/images/screenshot/img_main.png", // 썸네일
-      imageList: [
-        "/images/screenshot/img_main.png",
-       
-      ],
+      imageList: ["/images/screenshot/img_main.png"],
       imageAlt: "포트폴리오 사이트 썸네일",
-      tool: [
-        "html",
-        "scss",
-        "js",
-        "react",
-        "figma",
-        "git",
-        "zeplin",
-      ], // 기술스택
+      tool: ["html", "scss", "js", "react", "figma", "git", "zeplin"], // 기술스택
       contList: [
         // 주요내용
         "next.js 프레임워크를 활용하여 퍼블리싱, 반응형 작업",

@@ -42,7 +42,7 @@ export default function Introduction() {
           개의 프로젝트에 참여하였으며
         </p>
         <p>
-          그 중 <span>5</span>개의 vue.js기반 프로젝트에 투입되었습니다.
+          그 중 <span>5</span>개의 Vue.js 기반 프로젝트에 투입되었습니다.
         </p>
       </div>
     </section>

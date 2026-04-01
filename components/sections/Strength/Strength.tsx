@@ -31,10 +31,11 @@ export default function Strength() {
         <li className={cx("strength__card")}>
           <h3 className={cx("strength__ttl", "sub-ttl")}>웹 호환성 고려</h3>
           <p className={cx("strength__desc")}>
-            다양한 디바이스에 대응하여 반응형 웹 퍼블리싱을 진행합니다.
+            다양한 디바이스에 최적화된 반응형 웹 퍼블리싱을 진행합니다.
           </p>
           <p className={cx("strength__desc")}>
-            또한 크로스 브라우징 이슈를 해결한 경험이 있습니다.
+            크로스 브라우징 이슈에 대응하여 안정적으로 웹사이트를 구축한 경험이
+            있습니다.
           </p>
         </li>
         <li className={cx("strength__card")}>
