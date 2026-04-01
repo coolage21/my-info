@@ -30,9 +30,9 @@ export default function Card({
           <Image src={img} alt={imgAlt} width={351} height={200} quality={100}/>
         </span>
       )}
-      {title && <p className={cx("card__ttl")}>{title}</p>}
-      {desc && <p className={cx("card__desc")}>{desc}</p>}
-      {role && <p className={cx("card__role")}>{role}</p>}
+      {title && <span className={cx("card__ttl")}>{title}</span>}
+      {desc && <span className={cx("card__desc")}>{desc}</span>}
+      {role && <span className={cx("card__role")}>{role}</span>}
       {/* {badge && <p className="">{badge}</p>} */}
     </span>
   );
