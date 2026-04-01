@@ -1,5 +1,6 @@
 .card {
   text-align: left;
+  display: block;
   &--small {
   }
   &--large {
@@ -7,6 +8,7 @@
   &--medium {
   }
   &__img-wrapper {
+    display: block;
     width: 100%;
     background-size: cover;
     border: 1px solid var(--silver-color);
