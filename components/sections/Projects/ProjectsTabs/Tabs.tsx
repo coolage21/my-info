@@ -399,8 +399,8 @@ export default function Tabs() {
       type: "sideProject", //"sideProject",
       id: 10,
       title: "최하혜의 포트폴리오",
-      mainDesc: "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오", // 메인텍스트
-      subDesc: "나의 이력 및 프로젝트를 소개하기 위한 포트폴리오",
+      mainDesc: "나의 이력 및 프로젝트를 소개하는 포트폴리오", // 메인텍스트
+      subDesc: "나의 이력 및 프로젝트를 소개하는 포트폴리오",
       role: "퍼블리싱/디자인/개발 100%",
       date: "2026.03. ~ ", //기간
       count: 1, //참여인원
