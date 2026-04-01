@@ -130,7 +130,7 @@ export default function Modal({ open, user, onClose }: ModalProps) {
               </div> */}
               <div className={cx("modal__img-wrapper")}>
                 {user.imageList.map((imageList) => (
-                  <img src={imageList} alt={imageAlt} />
+                  <img src={imageList} alt={user.imageAlt} />
                 ))}
               </div>
             </div>
