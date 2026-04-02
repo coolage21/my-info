@@ -103,6 +103,9 @@
           visibility: visible;
           border-radius: 0 0 15px 15px;
           background-color: var(--lightgray-color);
+          border: 1px solid var(--silver-color);
+          border-top: none;
+          box-sizing:content-box;
         }
         .toggle-btn {
           span {
