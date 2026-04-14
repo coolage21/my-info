@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./IconLogo.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
@@ -24,11 +24,21 @@ export default function IconLogo({
   desc,
 }: IconLogoProps) {
   return (
-    <span className={cx("icon", `icon--${size}`, `${fill == true ? "icon--fill" : ""}`)}>
-      <Image src={img} alt={imgAlt} width={width} height={height} 
+    <span
+      className={cx(
+        "icon",
+        `icon--${size}`,
+        `${fill == true ? "icon--fill" : ""}`,
+      )}
+    >
+      <img
+        src={img}
+        alt={imgAlt}
+        width={width}
+        height={height}
         style={{
-        height: "auto",
-      }}
+          height: "auto",
+        }}
       />
     </span>
   );
