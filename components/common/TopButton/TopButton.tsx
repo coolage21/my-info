@@ -36,7 +36,7 @@ export default function TopButton({isShow}: TopButtonProps) {
       className={cx("top-btn", {active:isActive})}
       onClick={scrollToTop}
       >
-        top
+        TOP
     </button>
   );
 }

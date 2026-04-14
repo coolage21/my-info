@@ -24,7 +24,7 @@ export default function Contact() {
           <ul className={cx("profile__conts")}>
             <li className={cx("profile__cont")}>
               <span className={cx("icon--black__wrapper")}>
-                <Image
+                <img
                   className={cx("icon--black")}
                   src="/images/icons/icon_phone.png"
                   alt="전화번호"
@@ -36,7 +36,7 @@ export default function Contact() {
             </li>
             <li className={cx("profile__cont")}>
               <span className={cx("icon--black__wrapper")}>
-                <Image
+                <img
                   className={cx("icon--black")}
                   src="/images/icons/icon_global.png"
                   alt="홈페이지 주소"
@@ -48,7 +48,7 @@ export default function Contact() {
             </li>
             <li className={cx("profile__cont")}>
               <span className={cx("icon--black__wrapper")}>
-                <Image
+                <img
                   className={cx("icon--black")}
                   src="/images/icons/icon_mail.png"
                   alt="메일주소"

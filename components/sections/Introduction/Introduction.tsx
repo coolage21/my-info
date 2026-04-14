@@ -27,7 +27,8 @@ export default function Introduction() {
         <div className={cx("introduction__about")}>
           <p>유지보수를 고려한 컴포넌트 설계를 지향하며, </p>
           <p>
-            구조화된 마크업에서 즐거움을 찾는 <b>웹 퍼블리셔 최하혜</b>입니다.
+            구조화된 마크업에서 즐거움을 찾는 <br className="m-block" />
+            <b>웹 퍼블리셔 최하혜</b>입니다.
           </p>
         </div>
       </div>
@@ -42,7 +43,7 @@ export default function Introduction() {
           개의 프로젝트에 참여하였으며
         </p>
         <p>
-          그 중 <span>5</span>개의 Vue.js 기반 프로젝트에 투입되었습니다.
+          <span>5</span>개의 Vue.js 기반 프로젝트에 투입되었습니다.
         </p>
       </div>
     </section>

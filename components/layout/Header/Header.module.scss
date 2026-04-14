@@ -41,8 +41,8 @@
     overflow: hidden;
     img {
       position: absolute;
-      top:0;
-      left:var(--img-left);
+      top: 0;
+      left: var(--img-left);
       height: 23px;
       width: 268px;
       max-width: 200%;
@@ -71,7 +71,7 @@
   display: none;
   margin-left: auto;
   width: 25px;
-  height: 20px;
+  height: 15px;
   position: relative;
   span {
     transition: 0.3s;
@@ -95,6 +95,7 @@
     &__inner {
       width: 100%;
       position: relative;
+      padding: 12px 15px;
       &.active {
         border-radius: 15px 15px 0 0;
         .gnb {
@@ -105,7 +106,7 @@
           background-color: var(--lightgray-color);
           border: 1px solid var(--silver-color);
           border-top: none;
-          box-sizing:content-box;
+          box-sizing: content-box;
         }
         .toggle-btn {
           span {

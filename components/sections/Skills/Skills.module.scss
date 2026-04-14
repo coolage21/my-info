@@ -9,6 +9,7 @@
   &__ttl {
     margin-bottom: 8px;
     font-weight: 500;
+    font-size: calc(var(--text-lg) * var(--font-scale));
   }
   &__txt {
     margin-bottom: 18px;

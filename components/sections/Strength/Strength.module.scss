@@ -18,6 +18,7 @@
   &__ttl {
     font-weight: 500;
     margin-bottom: 15px;
+    font-size: calc(var(--text-lg) * var(--font-scale));
   }
   &__desc {
     color: var(--gray-color);
@@ -34,9 +35,13 @@
       width: 100%;
       max-width: 540px;
     }
-    &__ttl {
-    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .strength {
     &__desc {
+      display: inline;
     }
   }
 }

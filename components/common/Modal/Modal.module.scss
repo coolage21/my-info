@@ -32,6 +32,9 @@
     align-items: center;
     gap: 4px;
   }
+  &__logo {
+    width: 17px;
+  }
   &__desc {
     color: var(--gray-color);
     margin-bottom: 40px;
@@ -99,5 +102,11 @@
     max-width: 100vw;
     height: 100vh;
     max-height: 100vh;
+    &__sub-ttl {
+      margin-bottom: 4px;
+    }
+    hr {
+      border: .5px solid var(--silver-color);
+  }
   }
 }

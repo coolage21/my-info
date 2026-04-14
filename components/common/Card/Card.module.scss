@@ -34,6 +34,15 @@
   }
   &__role {
     color: var(--darkblue-color);
-    font-weight: 500;
+    // font-weight: 500;
+     font-size: calc(var(--text-sm) * var(--font-scale));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    &__ttl {
+      margin-bottom: 5px;
+    }
   }
 }

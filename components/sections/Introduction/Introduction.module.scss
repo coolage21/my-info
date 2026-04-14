@@ -10,7 +10,8 @@
     font-weight: 400;
     &-inner {
       display: block;
-    }    b {
+    }
+    b {
       font-weight: 700;
     }
   }
@@ -36,7 +37,8 @@
 
 @media screen and (max-width: 768px) {
   .introduction {
-    gap: 60px;
+    gap: 100px;
+    text-align: center;
   }
 }
 // @media screen and (max-width: 480px) {

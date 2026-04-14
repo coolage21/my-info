@@ -61,7 +61,9 @@ export default function Modal({ open, user, onClose }: ModalProps) {
           <div className={cx("modal__inner")}>
             <h2 id="modal-title" className={cx("modal__ttl")}>
               {" "}
-              <img src="/images/icon_logo.png" alt="" />
+                <span className={cx("modal__logo")}>
+                  <img src="/images/icon_logo.png" alt="" />
+                </span>
               {user.title}
             </h2>
             <p id="modal-desc" className={cx("modal__desc")}>
