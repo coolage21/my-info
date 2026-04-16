@@ -93,7 +93,7 @@ export default function Tabs() {
       contList: [
         // 주요내용
         "Figma를 활용한 UI 디자인 작업",
-        "vue.js 기반 페이지 퍼블리싱 및 컴포넌트 구현",
+        "Vue.js 기반 페이지 퍼블리싱 및 컴포넌트 구현",
         "SVG 이미지 적용 및 반응형·인터렉션 구현",
         "스켈레톤 UI를 활용한 로딩 화면 구성",
       ],
@@ -141,7 +141,7 @@ export default function Tabs() {
         "공통 레이아웃 및 메인 페이지 작업",
         "문제은행 관리페이지(리뉴얼) 퍼블리싱 작업",
         "Vue 환경에 맞는 라이브러리 적용 (vue-draggable-next, sweetalert2 등)",
-        "공통 라이브러리의 컴포넌트로 재사용이 가능하게 작업(datepicker 등)",
+        "재사용을 위한 라이브러리의 컴포넌트화(datepicker 등)",
       ],
       strength: [
         "Vue 환경에 맞는 라이브러리로 전환하여 안정성 개선",
