@@ -24,7 +24,7 @@ export default function Contact() {
           <ul className={cx("profile__conts")}>
             <li className={cx("profile__cont")}>
               <span className={cx("icon--black__wrapper")}>
-                <img
+                <Image
                   className={cx("icon--black")}
                   src="/images/icons/icon_phone.png"
                   alt="전화번호"
@@ -36,19 +36,19 @@ export default function Contact() {
             </li>
             <li className={cx("profile__cont")}>
               <span className={cx("icon--black__wrapper")}>
-                <img
+                <Image
                   className={cx("icon--black")}
                   src="/images/icons/icon_global.png"
-                  alt="홈페이지 주소"
+                  alt="깃허브"
                   width={16}
                   height={16}
                 />
               </span>
-              <em>www.choihh.com</em>
+              <a href="https://github.com/coolage21">Github 바로가기</a>
             </li>
             <li className={cx("profile__cont")}>
               <span className={cx("icon--black__wrapper")}>
-                <img
+                <Image
                   className={cx("icon--black")}
                   src="/images/icons/icon_mail.png"
                   alt="메일주소"
@@ -56,7 +56,7 @@ export default function Contact() {
                   height={16}
                 />
               </span>
-              <a href="mailto:chlgkgp006@naver.com">chlgkgp006@naver.com</a>
+              <a href="mailto:coolage512@gmail.com">coolage512@gmail.com</a>
             </li>
           </ul>
         </div>
