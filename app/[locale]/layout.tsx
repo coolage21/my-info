@@ -3,7 +3,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import "@/style/globals.scss";
-import { ThemeProvider } from "../../providers/theme-provider";
+import { ThemeProvider } from "../../providers/ui-provider";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
