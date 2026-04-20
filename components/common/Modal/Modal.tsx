@@ -72,8 +72,9 @@ export default function Modal({ open, user, onClose }: ModalProps) {
             <div className={cx("modal__cont")}>
               <h3 className={cx("modal__sub-ttl")}>기술 스택</h3>
               <div className={cx("modal__skill")}>
-                {user.tool.map((tool) => (
+                {user.tool.map((tool, index) => (
                   <IconLogo
+                    key={index}
                     img={`/images/icons/icon_${tool}.png`}
                     imgAlt={"HTML"}
                     width={17}
@@ -98,8 +99,9 @@ export default function Modal({ open, user, onClose }: ModalProps) {
                 <h3 className={cx("modal__sub-ttl")}>링크</h3>
                 {/* <p id="modal-desc">{user.link}</p> */}
                 <div className={cx("modal__links")}>
-                  {user.link.map((link) => (
+                  {user.link.map((link, index) => (
                     <a
+                      key={index}
                       className={cx("modal__link")}
                       target="_blank"
                       href={link.link}
@@ -117,8 +119,8 @@ export default function Modal({ open, user, onClose }: ModalProps) {
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>주요 내용</h3>
                 <ul className={cx("modal__main-cont")}>
-                  {user.contList.map((contList) => (
-                    <li>{contList}</li>
+                  {user.contList.map((contList, index) => (
+                    <li key={index}>{contList}</li>
                   ))}
                 </ul>
               </div>
@@ -131,8 +133,8 @@ export default function Modal({ open, user, onClose }: ModalProps) {
                 </ul>
               </div> */}
               <div className={cx("modal__img-wrapper")}>
-                {user.imageList.map((imageList) => (
-                  <img src={imageList} alt={user.imageAlt} />
+                {user.imageList.map((imageList, index) => (
+                  <img key={index} src={imageList} alt={user.imageAlt} />
                 ))}
               </div>
             </div>

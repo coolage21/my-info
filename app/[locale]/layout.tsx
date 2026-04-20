@@ -61,8 +61,6 @@ export default async function RootLayout({ children, params }: Props) {
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  console.log("locale:", locale);
-  console.log("title:", messages?.HomePage?.title);
   return (
     <html lang={locale}>
       <body className={notoSansKr.variable}>

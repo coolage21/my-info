@@ -5,32 +5,6 @@
 @import "./typography";
 @import "./mixin";
 
-/* @import "tailwindcss"; */
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
 /* helper */
 .dark {
   --bg-color: #182139;
@@ -41,6 +15,37 @@ body {
   --lightgray-color: #0e0f17;
   --img-left: -100%;
 }
+
+.sc-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+}
+
+.m-block {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .m-block {
+    display: block;
+  }
+}
+
+/* layout */
+.ly-main {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.ly-section {
+  padding-top: 100px;
+  //scroll-margin-top: 100px;
+}
+
+/* utils */
 .icon {
   &--black {
     position: absolute;
@@ -55,32 +60,5 @@ body {
       height: 16px;
       overflow: hidden;
     }
-  }
-}
-
-.ly-main {
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-}
-.ly-section {
-  padding-top: 100px;
-  //scroll-margin-top: 100px;
-}
-.sc-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  overflow: hidden;
-}
-
-/*helper*/
-.m-block {
-  display: none;
-}
-@media screen and (max-width: 480px) {
-  .m-block {
-    display: block;
   }
 }

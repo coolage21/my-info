@@ -7,7 +7,7 @@ export interface User {
   date: string;
   count: number;
   tool: string[];
-  subDesc: string; // ✅ "나 이거 쓸 거야!"라고 등록
+  subDesc: string;
   mainDesc: string;
   role: string;
   link?: { link: string; linkttl: string }[];
