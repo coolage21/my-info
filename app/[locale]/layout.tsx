@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import "@/style/globals.scss";
 import { ThemeProvider } from "../../providers/ui-provider";
+import { ReactQueryProvider } from "../../providers/react-query-provider";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -66,11 +67,13 @@ export default async function RootLayout({ children, params }: Props) {
       <body className={notoSansKr.variable}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
-            <div className="wrapper">
-              <Header></Header>
-              {children}
-              <Footer></Footer>
-            </div>
+            <ReactQueryProvider>
+              <div className="wrapper">
+                <Header></Header>
+                {children}
+                <Footer></Footer>
+              </div>
+            </ReactQueryProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
