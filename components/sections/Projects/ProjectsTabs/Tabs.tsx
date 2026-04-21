@@ -12,6 +12,7 @@ const cx = classNames.bind(styles);
 export default function Tabs() {
   
   const [projects, setProjects] = useState<Project[]>([]);
+  const [curProjects, setCurProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,12 +28,14 @@ export default function Tabs() {
   const [checkedCategory, setCheckedCategory] = useState("all");
 
   useEffect(()=> {
- const list =
-    checkedCategory == "all"
-      ? projects
-      : projects.filter((item) => item.type == checkedCategory);
-  }, [checkedCategory])
+    setCurProjects(
+      checkedCategory == "all"
+        ? projects
+        : projects.filter((item) => item.type == checkedCategory)
+    )
+  }, [checkedCategory, projects])
   // 카테고리
+
   const category: Category[] = ["project", "sideProject"];
 
   
@@ -69,28 +72,29 @@ export default function Tabs() {
   return (
     <div>
       <div role="group" aria-label="카테고리 필터" className={cx("tab__btns")}>
-        {/* <button
+        <button
           type="button"
           onClick={() => changeCategory("all")}
           aria-pressed={checkedCategory == "all"}
-          className={cx("tab__btn")}
+          className={cx("tab__btn", {active: checkedCategory === "all",})}
         >
           전체
-        </button> */}
+        </button>
         {category.map((category) => (
           <button
             key={category}
             type="button"
             onClick={() => changeCategory(category)}
             aria-pressed={checkedCategory === category}
-            className={cx("tab__btn")}
+            className={cx("tab__btn", {active: checkedCategory === category,})}
           >
             {category == "project" ? "프로젝트" : "사이드 프로젝트"}
+
           </button>
         ))}
       </div>
       <ul className={cx("project__lists")}>
-        {projects.map((data) => (
+        {curProjects.map((data) => (
           <li className={cx("project__list")} key={data.id}>
             <button
               ref={data.id === currentId ? listBtnRef : null}
