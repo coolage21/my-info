@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { User, Category, Project } from "@/types/project";
+import { Category, Project } from "@/types/project";
 import classNames from "classnames/bind";
 import styles from "./Tabs.module.scss";
 import Modal from "@/components/common/Modal/Modal";
