@@ -1,6 +1,6 @@
 export type Category = "project" | "sideProject";
 
-export interface User {
+export interface Project {
   type: Category;
   id: number;
   title: string;

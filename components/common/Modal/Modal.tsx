@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
-import { User } from "@/types/user";
+import { Project } from "@/types/project";
 import FocusTrap from "focus-trap-react";
 import Image from "next/image";
 import IconLogo from "@/components/common/IconLogo/IconLogo";
@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
 
 interface ModalProps {
   open: boolean;
-  user: Pick<
-    User,
+  project: Pick<
+    Project,
     | "title"
     | "subDesc"
     | "date"
@@ -23,12 +23,12 @@ interface ModalProps {
     | "imageList"
     | "imageAlt"
   >; // 특정항목만 불러오기
-  // user: Omit<User, "email">; // 특정항목만 빼기
-  // user: Partial<User>; // 전부 선택적
+  // project: Omit<Project, "email">; // 특정항목만 빼기
+  // project: Partial<Project>; // 전부 선택적
   onClose: () => void;
 }
 
-export default function Modal({ open, user, onClose }: ModalProps) {
+export default function Modal({ open, project, onClose }: ModalProps) {
   const btnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -64,15 +64,15 @@ export default function Modal({ open, user, onClose }: ModalProps) {
                 <span className={cx("modal__logo")}>
                   <img src="/images/icon_logo.png" alt="" />
                 </span>
-              {user.title}
+              {project.title}
             </h2>
             <p id="modal-desc" className={cx("modal__desc")}>
-              <div dangerouslySetInnerHTML={{ __html: user.subDesc }} />
+              <div dangerouslySetInnerHTML={{ __html: project.subDesc }} />
             </p>
             <div className={cx("modal__cont")}>
               <h3 className={cx("modal__sub-ttl")}>기술 스택</h3>
               <div className={cx("modal__skill")}>
-                {user.tool.map((tool, index) => (
+                {project.tool.map((tool, index) => (
                   <IconLogo
                     key={index}
                     img={`/images/icons/icon_${tool}.png`}
@@ -87,19 +87,19 @@ export default function Modal({ open, user, onClose }: ModalProps) {
             <div className={cx("modal__conts")}>
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>참여인원</h3>
-                <p className={cx("modal__date")}>{user.count}명</p>
+                <p className={cx("modal__date")}>{project.count}명</p>
               </div>
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>기간</h3>
-                <p className={cx("modal__date")}>{user.date}</p>
+                <p className={cx("modal__date")}>{project.date}</p>
               </div>
             </div>
-            {user.link && user.link.length > 0 && (
+            {project.link && project.link.length > 0 && (
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>링크</h3>
-                {/* <p id="modal-desc">{user.link}</p> */}
+                {/* <p id="modal-desc">{project.link}</p> */}
                 <div className={cx("modal__links")}>
-                  {user.link.map((link, index) => (
+                  {project.link.map((link, index) => (
                     <a
                       key={index}
                       className={cx("modal__link")}
@@ -114,12 +114,12 @@ export default function Modal({ open, user, onClose }: ModalProps) {
             )}
             <hr />
             <div>
-              {/* <p id="modal-desc">{user.contList}</p>
-          <p id="modal-desc">{user.strength}</p> */}
+              {/* <p id="modal-desc">{project.contList}</p>
+          <p id="modal-desc">{project.strength}</p> */}
               <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>주요 내용</h3>
                 <ul className={cx("modal__main-cont")}>
-                  {user.contList.map((contList, index) => (
+                  {project.contList.map((contList, index) => (
                     <li key={index}>{contList}</li>
                   ))}
                 </ul>
@@ -127,14 +127,14 @@ export default function Modal({ open, user, onClose }: ModalProps) {
               {/* <div className={cx("modal__cont")}>
                 <h3 className={cx("modal__sub-ttl")}>역량</h3>
                 <ul>
-                  {user.strength.map((strength) => (
+                  {project.strength.map((strength) => (
                     <li>{strength}</li>
                   ))}
                 </ul>
               </div> */}
               <div className={cx("modal__img-wrapper")}>
-                {user.imageList.map((imageList, index) => (
-                  <img key={index} src={imageList} alt={user.imageAlt} />
+                {project.imageList.map((imageList, index) => (
+                  <img key={index} src={imageList} alt={project.imageAlt} />
                 ))}
               </div>
             </div>
