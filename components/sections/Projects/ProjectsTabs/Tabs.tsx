@@ -21,7 +21,7 @@ export default function Tabs() {
   // 현재 체크된 카테고리(클릭시 변경됨으로 useState)
   const [checkedCategory, setCheckedCategory] = useState("all");
 
-  const curProjects: Project = 
+  const curProjects = 
       checkedCategory == "all"
         ? projectData
         : projectData.filter((item:Project) => item.type == checkedCategory)
@@ -84,7 +84,7 @@ export default function Tabs() {
         {/* 스켈레톤 이미지 작업 필요 */}
         </div>}
       <ul className={cx("project__lists")}>
-        {curProjects.map((data) => (
+        {curProjects.map((data: Project) => (
           <li className={cx("project__list")} key={data.id}>
             <button
               ref={data.id === currentId ? listBtnRef : null}
