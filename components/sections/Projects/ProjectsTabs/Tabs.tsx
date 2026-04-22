@@ -21,7 +21,7 @@ export default function Tabs() {
   // 현재 체크된 카테고리(클릭시 변경됨으로 useState)
   const [checkedCategory, setCheckedCategory] = useState("all");
 
-  const curProjects = 
+  const curProjects: Project = 
       checkedCategory == "all"
         ? projectData
         : projectData.filter((item:Project) => item.type == checkedCategory)
