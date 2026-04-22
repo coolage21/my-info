@@ -6,41 +6,28 @@ import classNames from "classnames/bind";
 import styles from "./Tabs.module.scss";
 import Modal from "@/components/common/Modal/Modal";
 import Card from "@/components/common/Card/Card";
+import { useQuery } from '@tanstack/react-query'
 
 const cx = classNames.bind(styles);
 
 export default function Tabs() {
   
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [curProjects, setCurProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-    const res = await fetch("/api/projects");
-    const data: Project[] = await res.json();
-    setProjects(data);
-  };
-
-  fetchData();
-  }, []);
+  const fetchData = async () => {
+  const res = await fetch("/api/projects");
+  return res.json();
+};
+  const {data:projectData=[], isPending, isError, refetch} = useQuery({ queryKey: ['projectData'], queryFn: fetchData })
 
   // 현재 체크된 카테고리(클릭시 변경됨으로 useState)
   const [checkedCategory, setCheckedCategory] = useState("all");
 
-  useEffect(()=> {
-    setCurProjects(
+  const curProjects = 
       checkedCategory == "all"
-        ? projects
-        : projects.filter((item) => item.type == checkedCategory)
-    )
-  }, [checkedCategory, projects])
+        ? projectData
+        : projectData.filter((item:Project) => item.type == checkedCategory)
+
   // 카테고리
-
   const category: Category[] = ["project", "sideProject"];
-
-  
-  // 보이는 리스트(카테고리 기준으로(이미 있는 state) 계산되는 값이라 useState적용 필요 없음)
- 
 
   // 카테고리 클릭 이벤트
   const changeCategory = (item: string) => {
@@ -56,13 +43,14 @@ export default function Tabs() {
   
   // 리스트 클릭 이벤트
   const findContent = (item: number) => {
-    const data = projects.find((projects) => projects.id == item);
+    const data = curProjects.find((projects:Project) => projects.id == item);
     if (data) {
       setCurrentId(data.id);
       setShowModal(true);
       setSelectedContent(data);
     }
   };
+
   const listBtnRef = useRef<HTMLButtonElement>(null);
   const handleClose = () => {
     setShowModal(false);
@@ -89,10 +77,12 @@ export default function Tabs() {
             className={cx("tab__btn", {active: checkedCategory === category,})}
           >
             {category == "project" ? "프로젝트" : "사이드 프로젝트"}
-
           </button>
         ))}
       </div>
+      {isPending &&  <div>로딩중...
+        {/* 스켈레톤 이미지 작업 필요 */}
+        </div>}
       <ul className={cx("project__lists")}>
         {curProjects.map((data) => (
           <li className={cx("project__list")} key={data.id}>
