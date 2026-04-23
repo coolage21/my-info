@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Contact.module.scss";
 import Image from "next/image";
-
+import Form from "@/components/common/Form/Form"
 const cx = classNames.bind(styles);
 
 export default function Contact() {
@@ -60,6 +60,11 @@ export default function Contact() {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div>
+        <Form/>
+      
       </div>
     </section>
   );
