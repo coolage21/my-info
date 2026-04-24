@@ -14,6 +14,7 @@ export default function Contact() {
           <p>업무에 임하고자 합니다.</p>
           <p>함께 작업하고 싶거나 궁금한 점이 있으면</p>
           <p>언제든지 연락주세요.</p>
+          <Form/>
         </div>
         <div className={cx("profile")}>
           <h3 className={cx("sc-only")}>profile</h3>
@@ -60,11 +61,6 @@ export default function Contact() {
             </li>
           </ul>
         </div>
-      </div>
-
-      <div>
-        <Form/>
-      
       </div>
     </section>
   );

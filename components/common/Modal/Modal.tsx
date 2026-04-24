@@ -26,12 +26,12 @@ export default function Modal({ projectId, onClose }: ModalProps) {
     if (!projectId) return;
 
     // 데이터 호출
-    const project = async ()  => {
+    const fetchProject  = async ()  => {
       const res = await fetch(`/api/projects/${projectId}`)
       const data: Project = await res.json();
       setProject(data)
     }
-    project();
+    fetchProject ();
 
     btnRef.current?.focus(); // 버튼 포커싱
   }, [projectId]);

@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server'
-import { projects } from '../route'
+import { projects } from './../data'
 
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const { id } = await params; // id가 promise라서 바로 접근이 안되어서 await 추가
+ const { id } = await params; // 여기서 await를 추가합니다.
 
   const project = projects.find(
     (item) => item.id === Number(id)
