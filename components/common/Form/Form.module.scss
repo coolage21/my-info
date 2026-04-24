@@ -1,0 +1,20 @@
+.form {
+  label {
+    display: inline-block;
+    width: 70px;
+  }
+  input {
+    width: 200px;
+    height: 40px;
+    border: 1px solid var(--darkblue-color);
+  }
+  button {
+  background-color: bisque; 
+  font-size: 10px; 
+    padding: 5px 10px;
+    border: 1px solid var(--silver-color);
+    background-color: var(--lightgray-color);
+    border-radius: 5px;
+    font-size: 23px; 
+  }
+}
