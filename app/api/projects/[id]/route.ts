@@ -7,8 +7,6 @@ export async function GET(
 ) {
 
   const { id } = await params;
-
-
   const project = projects.find((item) => item.id === Number(id));
 
   if (!project) {

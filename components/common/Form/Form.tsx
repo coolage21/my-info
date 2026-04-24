@@ -23,40 +23,45 @@ export default function ContactForm() {
         message,
       }),
     });
-
     alert("전송 완료!");
   }
 
   return (
-    <form onSubmit={handleSubmit}   className={cx('form')}>
-      <p>
-        <label htmlFor="name">이름</label>
+    <form onSubmit={handleSubmit} className={cx('form')}>
+      <p className={cx('form__item')}>
+        <label htmlFor="name" className={cx('form__label')}>이름</label>
         <input
+          className={cx('form__input')}
+          type="text"
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="이름"
+          placeholder="이름을 입력해주세요"
         />
       </p>
-      <p>
-        <label htmlFor="email">이메일</label>
+      <p className={cx('form__item')}>
+        <label htmlFor="email" className={cx('form__label')}>이메일</label>
         <input
+          className={cx('form__input')}
           id="email"
           value={email}
+          type="email"
+          required
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="이메일"
+          placeholder="이메일을 입력해주세요"
         />
       </p>
-      <p>
-        <label htmlFor="message">내용</label>
+      <p className={cx('form__item')}>
+        <label htmlFor="message" className={cx('form__label')}>내용</label>
         <textarea
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="내용"
+          placeholder="내용을 입력해주세요"
+          rows="5"
         />
       </p>
-      <button type="submit">보내기</button>
+      <button type="submit" className={cx('form__submit')}>메세지 보내기</button>
     </form>
   );
 }
