@@ -58,7 +58,7 @@ export default function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="내용을 입력해주세요"
-          rows="5"
+          rows={5}
         />
       </p>
       <button type="submit" className={cx('form__submit')}>메세지 보내기</button>
