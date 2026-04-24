@@ -7,7 +7,7 @@ import { Project } from "@/types/project";
 const cx = classNames.bind(styles);
 
 export default async function Projects() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
+  const res = await fetch(`https://hahye.com/api/projects`);
   const data: Project[] = await res.json(); 
   return (
     <section id="projects" className={cx("projects", "ly-main", "ly-section")}>
