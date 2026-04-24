@@ -1,59 +1,60 @@
-import { useEffect, useRef } from "react";
+"use client";
+import { useState, useEffect, useRef } from "react";
 import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
 import { Project } from "@/types/project";
 import FocusTrap from "focus-trap-react";
 import Image from "next/image";
 import IconLogo from "@/components/common/IconLogo/IconLogo";
+import { useQuery } from '@tanstack/react-query'
 
 const cx = classNames.bind(styles);
 
 interface ModalProps {
-  open: boolean;
-  project: Pick<
-    Project,
-    | "title"
-    | "subDesc"
-    | "date"
-    | "count"
-    | "link"
-    | "tool"
-    | "contList"
-    | "strength"
-    | "imageList"
-    | "imageAlt"
-  >; // 특정항목만 불러오기
-  // project: Omit<Project, "email">; // 특정항목만 빼기
-  // project: Partial<Project>; // 전부 선택적
+  projectId: number;
   onClose: () => void;
 }
 
-export default function Modal({ open, project, onClose }: ModalProps) {
+export default function Modal({ projectId, onClose }: ModalProps) {
+  
   const btnRef = useRef<HTMLButtonElement>(null);
+  
+  const [project, setProject] = useState<Project | null>(null)
 
+  // 데이터 맵핑 
   useEffect(() => {
-    if (!open) return;
-    if (open) {
-      btnRef.current?.focus();
+    if (!projectId) return;
 
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === "Escape") {
-          onClose();
-        }
-      };
-
-      window.addEventListener("keydown", handleKeyDown);
-
-      return () => {
-        window.removeEventListener("keydown", handleKeyDown);
-      };
+    // 데이터 호출
+    const project = async ()  => {
+      const res = await fetch(`/api/projects/${projectId}`)
+      const data: Project = await res.json();
+      setProject(data)
     }
-  }, [open, onClose]);
+    project();
+
+    btnRef.current?.focus(); // 버튼 포커싱
+  }, [projectId]);
+
+  // 닫기
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
 
   return (
     <div className={cx("modal__wrapper")} role="dialog" aria-modal="true">
       <FocusTrap>
-        <div
+        {project &&
+          <div
           className={cx("modal")}
           aria-labelledby="modal-title"
           aria-describedby="modal-desc"
@@ -149,6 +150,7 @@ export default function Modal({ open, project, onClose }: ModalProps) {
             <span className={cx("sc-only")}>닫기</span>
           </button>
         </div>
+        }
       </FocusTrap>
     </div>
   );

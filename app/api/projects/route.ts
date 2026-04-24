@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import { Project } from '@/types/project'
 
-const projects: Project[] = [
+export const projects: Project[] = [
     {
       type: "project", //"sideProject",
       id: 1,
