@@ -1,19 +1,18 @@
 import classNames from "classnames/bind";
 import styles from "./Projects.module.scss";
-import ProjectList from "./ProjectList";
+import Tabs from "./ProjectsTabs/Tabs";
 import Heading from "@/components/common/Heading/Heading";
 import { Project } from "@/types/project";
-import { supabase } from "@/lib/supabase/client";
 
-export default async function Test() {
-  const cx = classNames.bind(styles);
-  const { data, error } = await supabase
-    .from("project")
-    .select<"*", Project>("*");
+const cx = classNames.bind(styles);
+
+export default async function Projects() {
+  const res = await fetch(`https://hahye.com/api/projects`);
+  const data: Project[] = await res.json(); 
   return (
     <section id="projects" className={cx("projects", "ly-main", "ly-section")}>
       <Heading title="대표 프로젝트" size="medium" />
-      <ProjectList initialData={data || []} />
+      <Tabs initialData={data} />
     </section>
   );
 }

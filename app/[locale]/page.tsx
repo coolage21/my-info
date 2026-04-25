@@ -2,9 +2,10 @@ import Image from "next/image";
 import Introduction from "@/components/sections/Introduction/Introduction";
 import Strength from "@/components/sections/Strength/Strength";
 import Skills from "@/components/sections/Skills/Skills";
-import Projects from "@/components/sections/Projects/Projects";
+import ProjectsBefore from "@/components/sections/ProjectsBefore/Projects";
 import History from "@/components/sections/History/History";
 import Contact from "@/components/sections/Contact/Contact";
+import Projects from "@/components/sections/Projects/Projects";
 import TopButton from "@/components/common/TopButton/TopButton";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Skills />
       <History />
       <Projects />
+      {/* <Projects /> */}
       <Contact />
       <TopButton isShow={true} />
     </main>

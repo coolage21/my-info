@@ -87,9 +87,9 @@ export default function Tabs({initialData}: TabProps) {
         ))}
       </ul>
       <div></div>
-      {currentId && (
+      {/* {currentId && (
         <Modal projectId={currentId} onClose={handleClose} />
-      )}
+      )} */}
     </div>
   );
 }
