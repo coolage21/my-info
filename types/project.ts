@@ -16,4 +16,5 @@ export interface Project {
   image: string;
   image_list: string[];
   image_alt: string;
+  views: number;
 }

@@ -7,7 +7,7 @@ import FocusTrap from "focus-trap-react";
 import Image from "next/image";
 import IconLogo from "@/components/common/IconLogo/IconLogo";
 import { supabase } from "@/lib/supabase/client";
-
+import { getProjectById } from "@/lib/queries/project";
 const cx = classNames.bind(styles);
 
 interface ModalProps {
@@ -15,32 +15,24 @@ interface ModalProps {
   onClose: () => void;
 }
 
-// 1. async 제거
 export default function Modal({ projectId, onClose }: ModalProps) {
   const btnRef = useRef<HTMLButtonElement>(null);
 
-  // 2. 데이터와 로딩 상태 관리
   const [data, setData] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // 3. 데이터 호출 로직을 useEffect 안으로 이동
   useEffect(() => {
     const fetchProject = async () => {
       setIsLoading(true);
-      const { data: project, error } = await supabase
-        .from("project")
-        .select<"*", Project>("*")
-        .eq("id", projectId)
-        .single();
+      const { data, error } = await getProjectById(supabase, projectId);
 
       if (error) {
         console.error("조회 에러:", error.message);
       } else {
-        setData(project);
+        setData(data);
       }
       setIsLoading(false);
     };
-
     fetchProject();
   }, [projectId]);
 
@@ -53,7 +45,7 @@ export default function Modal({ projectId, onClose }: ModalProps) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
-  // 로딩 중일 때 표시 (선택 사항)
+  // 로딩 중일 때
   if (isLoading) return <div className={cx("modal__wrapper")}>Loading...</div>;
   if (!data) return null;
 
