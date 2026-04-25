@@ -80,16 +80,14 @@
 }
 .skeleton {
   .modal {
-    transform: translate(0, -50%);
     &__ttl {
       height: 25px;
       width: 300px;
       max-width: 100%;
-      background-color: var(--gray-color);
+      background-color: #b0b0b0;
     }
     &__desc {
       height: 40px;
-      background-color: red;
       background-color: var(--silver-color);
     }
     &__conts {
@@ -101,7 +99,7 @@
       height: 17px;
       width: 150px;
       max-width: 80%;
-      background-color: var(--gray-color);
+      background-color: #b0b0b0;
     }
     &__date {
       background-color: var(--silver-color);

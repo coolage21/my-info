@@ -48,8 +48,8 @@ export default function Modal({ projectId, onClose }: ModalProps) {
   // 로딩 중일 때
   if (isLoading)
     return (
-      <div className={cx("skeleton")}>
-        <div className={cx("modal", "skeleton")}>
+      <div className={cx("modal__wrapper", "skeleton")}>
+        <div className={cx("modal")}>
           <div className={cx("modal__inner")}>
             {/* 제목 */}
             <div className={cx("modal__ttl")}></div>
