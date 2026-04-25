@@ -75,7 +75,7 @@ export default function Modal({ projectId, onClose }: ModalProps) {
 
             <div id="modal-desc" className={cx("modal__desc")}>
               {/* dangerouslySetInnerHTML 사용 시 데이터 유무 확인 필수 */}
-              <div dangerouslySetInnerHTML={{ __html: data.subDesc || "" }} />
+              <div dangerouslySetInnerHTML={{ __html: data.sub_desc || "" }} />
             </div>
 
             <div className={cx("modal__cont")}>

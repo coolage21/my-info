@@ -7,13 +7,13 @@ export interface Project {
   date: string;
   count: number;
   tool: string[];
-  subDesc: string;
-  mainDesc: string;
+  sub_desc: string;
+  main_desc: string;
   role: string;
   link?: { link: string; linkttl: string }[];
-  contList: string[];
+  cont_list: string[];
   strength: string[];
   image: string;
-  imageList: string[];
-  imageAlt: string;
+  image_list: string[];
+  image_alt: string;
 }
