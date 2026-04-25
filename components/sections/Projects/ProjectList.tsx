@@ -9,13 +9,13 @@ import Card from "@/components/common/Card/Card";
 
 const cx = classNames.bind(styles);
 
-// 리스트 형태면 뒤에 []를 붙여줍니다.
+// 리스트 형태면 뒤에 [] 추가
 interface TabProps {
   initialData: Project[];
 }
 
 export default function Tabs({ initialData }: TabProps) {
-  // 현재 체크된 카테고리(클릭시 변경됨으로 useState)
+  // 현재 체크된 카테고리(클릭 시 변경됨으로 useState)
   const [checkedCategory, setCheckedCategory] = useState("all");
 
   // 계산된 값(curProjects)
@@ -27,14 +27,11 @@ export default function Tabs({ initialData }: TabProps) {
   // 카테고리
   const category: Category[] = ["project", "sideProject"];
 
-  // 모달 열고 닫힘 처리
-  // const [showModal, setShowModal] = useState(false);
+  // 모달에 넘겨줄 id 값
   const [currentId, setCurrentId] = useState<number | null>(null);
 
   const listBtnRef = useRef<HTMLButtonElement>(null);
   const handleClose = () => {
-    // setShowModal(false);
-    // setSelectedContent(null);
     setCurrentId(null);
     listBtnRef.current?.focus(); // 웹접근성 포커스
   };

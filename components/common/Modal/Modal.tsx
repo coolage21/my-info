@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react"; // useState 추가
 import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
 import { Project } from "@/types/project";
-import FocusTrap from "focus-trap-react";
+import FocusTrap from "focus-trap-react"; // 웹접근성 포커스 고정
 import Image from "next/image";
 import IconLogo from "@/components/common/IconLogo/IconLogo";
 import { supabase } from "@/lib/supabase/client";
@@ -46,7 +46,57 @@ export default function Modal({ projectId, onClose }: ModalProps) {
   }, [onClose]);
 
   // 로딩 중일 때
-  if (isLoading) return <div className={cx("modal__wrapper")}>Loading...</div>;
+  if (isLoading)
+    return (
+      <div className={cx("skeleton")}>
+        <div className={cx("modal", "skeleton")}>
+          <div className={cx("modal__inner")}>
+            {/* 제목 */}
+            <div className={cx("modal__ttl")}></div>
+            {/* 내용 */}
+            <div className={cx("modal__desc")}></div>
+            {/* 스킬 */}
+            <div className={cx("modal__cont")}>
+              <div className={cx("modal__sub-ttl")}></div>
+              <div className={cx("modal__skill")}></div>
+            </div>
+            {/* 참여인원 */}
+            <div className={cx("modal__conts")}>
+              <div className={cx("modal__cont")}>
+                <div className={cx("modal__sub-ttl")}></div>
+                <p className={cx("modal__date")}></p>
+              </div>
+              {/* 기간 */}
+              <div className={cx("modal__cont")}>
+                <div className={cx("modal__sub-ttl")}></div>
+                <p className={cx("modal__date")}></p>
+              </div>
+            </div>
+            {/* 링크 */}
+            <div className={cx("modal__cont")}>
+              <div className={cx("modal__sub-ttl")}></div>
+              <div className={cx("modal__links")}></div>
+            </div>
+
+            <hr />
+            {/* 주요내용 */}
+            <div>
+              <div className={cx("modal__cont")}>
+                <div className={cx("modal__sub-ttl")}>주요 내용</div>
+                <div className={cx("modal__main-cont")}>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              {/* 이미지 */}
+              <div className={cx("modal__img-wrapper")}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   if (!data) return null;
 
   return (

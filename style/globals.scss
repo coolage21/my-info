@@ -29,6 +29,16 @@
   display: none;
 }
 
+.c-red {
+  color: var(--red-color);
+}
+
+.error-txt {
+  color: var(--red-color);
+  font-size: calc(var(--text-sm) * var(--font-scale));
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 480px) {
   .m-block {
     display: block;
