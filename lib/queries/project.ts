@@ -7,7 +7,7 @@ export const getProjectById = async (supabase: SupabaseClient, id: number) => {
 
 // 리스트 조회
 export const getProjectList = async (supabase: SupabaseClient) => {
-  return supabase.from("project").select("*");
+  return supabase.from("project").select("*").order("id", { ascending: true });
 };
 
 // 리스트 조회수 업데이트
