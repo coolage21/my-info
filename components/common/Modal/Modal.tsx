@@ -22,6 +22,8 @@ export default function Modal({ projectId, onClose }: ModalProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    if (!projectId) return;
+    // useEffect fetch
     const fetchProject = async () => {
       setIsLoading(true);
       const { data, error } = await getProjectById(supabase, projectId);
@@ -34,6 +36,16 @@ export default function Modal({ projectId, onClose }: ModalProps) {
       setIsLoading(false);
     };
     fetchProject();
+
+    fetch("/api/project/view", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: projectId,
+      }),
+    });
   }, [projectId]);
 
   // ESC 키로 닫기 로직
@@ -82,7 +94,7 @@ export default function Modal({ projectId, onClose }: ModalProps) {
             {/* 주요내용 */}
             <div>
               <div className={cx("modal__cont")}>
-                <div className={cx("modal__sub-ttl")}>주요 내용</div>
+                <div className={cx("modal__sub-ttl")}></div>
                 <div className={cx("modal__main-cont")}>
                   <div></div>
                   <div></div>
