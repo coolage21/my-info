@@ -90,7 +90,6 @@ export default function Modal({ projectId, onClose }: ModalProps) {
               <div className={cx("modal__links")}></div>
             </div>
 
-            <hr />
             {/* 주요내용 */}
             <div>
               <div className={cx("modal__cont")}>
@@ -133,7 +132,7 @@ export default function Modal({ projectId, onClose }: ModalProps) {
             </div>
 
             <div className={cx("modal__cont")}>
-              <h3 className={cx("modal__sub-ttl")}>기술 스택</h3>
+              <h3 className={cx("modal__sub-ttl")}>스킬</h3>
               <div className={cx("modal__skill")}>
                 {data.tool?.map((tool, index) => (
                   <IconLogo
@@ -151,12 +150,12 @@ export default function Modal({ projectId, onClose }: ModalProps) {
             {/* ... 나머지 JSX (data.count, data.date 등)는 기존과 동일하게 유지 ... */}
             <div className={cx("modal__conts")}>
               <div className={cx("modal__cont")}>
-                <h3 className={cx("modal__sub-ttl")}>참여인원</h3>
-                <p className={cx("modal__date")}>{data.count}명</p>
+                <h3 className={cx("modal__sub-ttl")}>작업 기간</h3>
+                <p className={cx("modal__date")}>{data.date}</p>
               </div>
               <div className={cx("modal__cont")}>
-                <h3 className={cx("modal__sub-ttl")}>기간</h3>
-                <p className={cx("modal__date")}>{data.date}</p>
+                <h3 className={cx("modal__sub-ttl")}>참여인원</h3>
+                <p className={cx("modal__date")}>{data.count}명</p>
               </div>
             </div>
             {data.link && data.link.length > 0 && (
@@ -177,7 +176,6 @@ export default function Modal({ projectId, onClose }: ModalProps) {
                 </div>
               </div>
             )}
-            <hr />
             <div>
               {/* <p id="modal-desc">{project.contList}</p>
           <p id="modal-desc">{project.strength}</p> */}

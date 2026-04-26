@@ -16,7 +16,7 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "최하혜 포트폴리오", // 브라우저 탭에 표시될 이름
+  title: "웹 퍼블리셔 최하혜 포트폴리오", // 브라우저 탭에 표시될 이름
   description: "웹 퍼블리셔 최하혜 포트폴리오 사이트",
   keywords: [
     "웹퍼블리셔",
@@ -26,7 +26,10 @@ export const metadata: Metadata = {
     "웹접근성",
     "웹표준형",
     "퍼블리셔 포트폴리오",
+    "2026 퍼블리셔 포트폴리오",
     "경력 퍼블리셔 포트폴리오",
+    "프론트엔드 포트폴리오",
+    "React 개발자",
   ],
   openGraph: {
     title: "최하혜의 포트폴리오",
