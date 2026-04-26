@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 3px rgba(160, 160, 160, 0.715);
+  position: relative;
   background-color: #fff;
 
   &--small {
@@ -17,7 +18,23 @@
   }
   &--fill {
     border-radius: 8px;
-    overflow: hidden;
     background-color: transparent;
+  }
+  &-tooltip {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    position: absolute;
+    top: 110%;
+    font-size: calc(var(--text-sm) * var(--font-scale));
+    border: 1px solid var(--silver-color);
+    padding: 2px 4px;
+    background-color: #fff;
+  }
+  &:hover {
+    .icon-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

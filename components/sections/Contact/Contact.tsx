@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Contact.module.scss";
 import Image from "next/image";
-import Form from "@/components/common/Form/Form"
+import Form from "@/components/common/Form/Form";
 const cx = classNames.bind(styles);
 
 export default function Contact() {
@@ -9,7 +9,7 @@ export default function Contact() {
     <section id="contact" className={cx("contact", "ly-main", "ly-section")}>
       <div className={cx("contact__inner")}>
         <h2 className={cx("sc-only")}>contact</h2>
-                <div className={cx("profile")}>
+        <div className={cx("profile")}>
           <div className={cx("contact__txt")}>
             <p>기본에 충실하되 유연한 사고를 가지고</p>
             <p>업무에 임하고자 합니다.</p>
@@ -56,14 +56,15 @@ export default function Contact() {
                   height={16}
                 />
               </span>
-              <a href="mailto:coolage512@gmail.com">coolage512@gmail.com</a>
+              {/* <a href="mailto:coolage512@gmail.com"> */}
+              coolage512@gmail.com
+              {/* </a> */}
             </li>
           </ul>
         </div>
         <div className={cx("contact__message")}>
-          <Form/>
+          <Form />
         </div>
-
       </div>
     </section>
   );

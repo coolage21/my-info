@@ -74,6 +74,15 @@
     display: flex;
     gap: 30px;
   }
+  &__link {
+    color: inherit;
+    transition: 0.2s;
+    color: var(--darkblue-color);
+    text-decoration: underline;
+    &:hover {
+      font-weight: 500;
+    }
+  }
   &__img-wrapper {
     border: 1px solid var(--silver-color);
   }
