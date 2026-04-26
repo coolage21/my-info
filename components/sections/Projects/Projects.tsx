@@ -9,6 +9,7 @@ import { getProjectList } from "@/lib/queries/project";
 const cx = classNames.bind(styles);
 
 export default async function Test() {
+  // Server Component fetch
   const { data: data, error } = await getProjectList(supabase);
 
   if (error) {

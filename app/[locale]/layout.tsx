@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.svg", // public/favicon.svg 경로 (없으면 .ico나 .png도 가능)
+    icon: "/favicon.ico", // public/favicon.svg 경로 (없으면 .ico나 .png도 가능)
   },
 };
 
