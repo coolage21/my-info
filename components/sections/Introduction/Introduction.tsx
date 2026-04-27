@@ -4,6 +4,21 @@ import styles from "./Introduction.module.scss";
 
 const cx = classNames.bind(styles);
 
+export function getCareerMonth() {
+  const today = new Date();
+  const start = new Date("2024-07-09");
+  const before = 28;
+
+  let month =
+    (today.getFullYear() - start.getFullYear()) * 12 +
+    (today.getMonth() - start.getMonth());
+  if (today.getDate() < start.getDate()) {
+    month = month - 1;
+  }
+
+  return String(month + before);
+}
+
 export default function Introduction() {
   const t = useTranslations("HomePage");
 
@@ -34,8 +49,8 @@ export default function Introduction() {
       </div>
       <div className={cx("introduction__desc")}>
         <p>
-          저는 <span>4</span>
-          <span>7</span>개월간
+          저는 <span>{getCareerMonth()[0]}</span>
+          <span>{getCareerMonth()[1]}</span>개월간
         </p>
         <p>
           <span>1</span>
