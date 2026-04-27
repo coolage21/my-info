@@ -31,18 +31,29 @@ export default function ContactForm() {
       messageRef.current?.focus();
       return;
     }
-    await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-      }),
-    });
-    alert("전송 완료!");
+    
+    try {
+      const res = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+      if(res.ok){
+        alert("전송 완료!");
+      } else {
+        alert('전송 실패! 다시 시도해주세요.')
+      }
+    }
+    catch(err){
+      console.log(err);
+      alert('네트워크 오류')
+    }
   }
 
   return (
