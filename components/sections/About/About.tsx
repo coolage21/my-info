@@ -93,10 +93,10 @@ export function History() {
           </div>
           <ul>
             <li className={cx("history__list")}>
-              자사 홈페이지·쇼핑몰·가상피팅API·CMS의 퍼블리싱 및 유지보수
+              자사 홈페이지·쇼핑몰·CMS의 퍼블리싱 및 유지보수
             </li>
             <li className={cx("history__list")}>
-              협력 업체 웹사이트 퍼블리싱 및 유지보수
+              협력 업체 웹사이트 퍼블리싱 및 프론트엔드 기능 유지보수
             </li>
           </ul>
         </div>
