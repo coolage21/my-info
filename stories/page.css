@@ -5,7 +5,6 @@
   color: #333;
   font-size: calc(var(--text-sm) * var(--font-scale));
   line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .storybook-page h2 {

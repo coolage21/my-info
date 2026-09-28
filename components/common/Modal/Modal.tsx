@@ -166,7 +166,7 @@ export default function Modal({ projectId, onClose }: ModalProps) {
                   {data.link.map((link, index) => (
                     <a
                       key={index}
-                      className={cx("modal__link")}
+                      className={cx("btn", "modal__link")}
                       target="_blank"
                       href={link.link}
                     >

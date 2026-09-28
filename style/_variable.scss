@@ -2,41 +2,56 @@
   /* font scale (접근성 확대용) */
   --font-scale: 1;
 
+  /* layout */
+  --container-max: 1200px;
+  --grid-columns: 12;
+  --grid-gutter: 32px;
+
   /* typography scale */
-  --text-xs: 0.75rem; /* 12px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-md: 1rem; /* 16px */
-  --text-lg: 1.125rem; /* 18px */
-  --text-xl: 1.25rem; /* 20px */
-  --text-xxl: 1.5rem; /* 24px */
-  --text-xxxl: 2.5rem; /* 40px */
+  --text-xs: 0.875rem; /* 14px */
+  --text-sm: 1rem; /* 16px */
+  --text-md: 1.125rem; /* 18px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-xxl: 2rem; /* 32px */
+  --text-xxxl: 3rem; /* 48px */
 
   /* line height */
-  --leading-normal: 1.3;
-  --leading-relaxed: 1.7;
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.6;
 
   /* spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
+  --space-xs: 24px;
+  --space-sm: 32px;
+  --space-md: 48px;
+  --space-lg: 64px;
 
   /* color */
-  --bg-color: white;
-  --text-color: black;
-  --gray-color: #727272;
-  --lightgray-color: #f8f8f8;
-  --blue-color: #4d9ad0;
-  --darkblue-color: #0e2d50;
-  --silver-color: #d7d7d7;
-  --red-color: #d1554b;
-  --linear: linear-gradient(to bottom, #2f7ac0, #2f7ac0, #185499, #185499);
+  --text-color: #0f294a;
+  --box-color: #0f294a;
+  --border-color: #d8e2f0;
+  --bg-color: #ffffff;
+  --sub-bg-color: #f8f9ff;
+  --blue-color: #2563eb;
+  --orange-color: #cd4d12;
+  --sub-text-color: #4a5568;
 
-  --round-sm: 5px;
-  --round-md: 10px;
-  --round-lg: 15px;
+  // --gray-color: #727272;
+  // --lightgray-color: #f8f8f8;
+  // --darkblue-color: #0e2d50;
+  // --silver-color: #d7d7d7;
+  --linear: linear-gradient(
+    to bottom,
+    rgba(248, 250, 252, 0.9),
+    #fff 50%,
+    #fff
+  );
+
+  --round-sm: 4px;
 
   --img-left: 0;
+
+  --box-shadow: 0 10px 30px 6px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
   :root {

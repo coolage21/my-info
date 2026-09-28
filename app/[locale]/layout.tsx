@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
+import "@/style/globals.scss";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
-import "@/style/globals.scss";
 import { ThemeProvider } from "../../providers/ui-provider";
 import { ReactQueryProvider } from "../../providers/react-query-provider";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -11,34 +10,40 @@ import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
-const notoSansKr = Noto_Sans_KR({
-  variable: "--font-geist-sans",
+import localFont from "next/font/local";
+
+const pretendard = localFont({
+  src: "./../font/PretendardVariable.woff2",
+  variable: "--font-pretendard",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
-  title: "웹 퍼블리셔 최하혜 포트폴리오", // 브라우저 탭에 표시될 이름
-  description: "웹 퍼블리셔 최하혜 포트폴리오 사이트",
+  title: "프론트엔드 개발자 최하혜 포트폴리오", // 브라우저 탭에 표시될 이름
+  description: "프론트엔드 개발자 최하혜 포트폴리오 사이트",
   keywords: [
+    "프론트엔드",
     "웹퍼블리셔",
     "웹퍼블리싱",
-    "프론트엔드",
     "개발자",
+    "웹개발자",
     "웹접근성",
     "웹표준형",
-    "퍼블리셔 포트폴리오",
-    "2026 퍼블리셔 포트폴리오",
-    "경력 퍼블리셔 포트폴리오",
     "프론트엔드 포트폴리오",
+    "2026 프론트엔드 개발자 포트폴리오",
+    "경력 퍼블리셔 포트폴리오",
+    "퍼블리셔 포트폴리오",
     "React 개발자",
   ],
   openGraph: {
     title: "최하혜의 포트폴리오",
-    description: "안녕하십니까. 웹 퍼블리셔 최하혜의 포트폴리오 사이트입니다.",
-    url: "https://my-info-lake.vercel.app/ko",
+    description:
+      "안녕하십니까. 프론트엔드 개발자 최하혜의 포트폴리오 사이트입니다.",
+    url: "https://hahye.com",
     siteName: "코딩에이지 포트폴리오",
     images: [
       {
-        url: "https://my-info-lake.vercel.app/images/screenshot/img_main.png",
+        url: "https://hahye.com/images/screenshot/img_main.png",
         width: 1200,
         height: 630,
       },
@@ -67,7 +72,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={notoSansKr.variable}>
+      <body className={pretendard.variable}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <ReactQueryProvider>

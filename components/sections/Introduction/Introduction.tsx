@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import classNames from "classnames/bind";
 import styles from "./Introduction.module.scss";
-
+import Link from "next/link";
+import Image from "next/image";
 const cx = classNames.bind(styles);
 
 export function getCareerMonth() {
@@ -27,39 +28,75 @@ export default function Introduction() {
       id="introduction"
       className={cx("introduction", "ly-main", "ly-section")}
     >
-      <h2 className="sc-only">Introduction</h2>
-      <div>
-        <h2 className={cx("introduction__ttl")}>
-          <span className={cx("introduction__ttl-inner")}>
-            {/* {t("title")} */}
-            <b> 탄탄한 구조</b> 위에
-          </span>
-          <span className={cx("introduction__ttl-inner")}>
-            <b>완성도</b>를 쌓아가는,
-          </span>
-          <span className={cx("introduction__ttl-inner")}>웹 퍼블리셔</span>
-        </h2>
-        <div className={cx("introduction__about")}>
-          <p>유지보수를 고려한 컴포넌트 설계를 지향하며, </p>
-          <p>
-            구조화된 마크업에서 즐거움을 찾는 <br className="m-block" />
-            <b>웹 퍼블리셔 최하혜</b>입니다.
-          </p>
+      <div className={cx("introduction__inner")}>
+        <div className={cx("introduction__badge")}>
+          <span>WELCOME</span>
+          I’M CODINGAGE, FRONTEND DEVELOPER
         </div>
-      </div>
-      <div className={cx("introduction__desc")}>
-        <p>
-          저는 <span>{getCareerMonth()[0]}</span>
-          <span>{getCareerMonth()[1]}</span>개월간
-        </p>
-        <p>
-          <span>1</span>
-          <span>2</span>
-          개의 프로젝트에 참여하였으며
-        </p>
-        <p>
-          <span>5</span>개의 Vue.js 기반 프로젝트에 투입되었습니다.
-        </p>
+        <h1 className={cx("introduction__ttl")}>
+          안녕하세요
+          <span className={cx("introduction__ttl-inner")}>
+            프론트엔드 개발자 <br className={cx("m-block")} /> 최하혜입니다.
+          </span>
+        </h1>
+        <div className={cx("introduction__about")}>
+          유지보수를 고려한 컴포넌트 설계를 지향하며,&nbsp;
+          <br className={cx("m-none")} />더 나은 구조가 무엇인지 고민하고
+          구현하는데 즐거움을 찾습니다.
+        </div>
+        {/* <div className={cx("introduction__btn-wrapper")}>
+          <Link href="" className={cx("btn--orange")}>
+            <span>
+              <img src="" alt="" />
+            </span>
+          </Link>
+          <Link href="" className="btn--orange">
+            <span>
+              <img src="" alt="" />
+            </span>
+          </Link>
+        </div> */}
+        <div className={cx("introduction__btn--wrapper")}>
+          <Link
+            download
+            href="/경력기술서_최하혜.pdf"
+            className={cx("btn ", "btn--icon", "btn--small", "btn--orange")}
+          >
+            <Image
+              src="/images/icon_document.png"
+              alt=""
+              width={20}
+              height={20}
+            ></Image>
+            경력기술서
+          </Link>
+          <Link
+            href="https://github.com/coolage21"
+            className={cx("btn ", "btn--icon", "btn--small", "btn--orange")}
+            target="_blank"
+          >
+            <Image
+              src="/images/icon_github.png"
+              alt=""
+              width={16}
+              height={16}
+            ></Image>
+            Github
+          </Link>
+          <Link
+            href="https://app.notion.com/p/3db281c7620b801994eec12989bcabd2"
+            className={cx("btn", "btn--icon", "btn--small", "btn--orange")}
+            target="_blank"
+          >
+            <Image
+              src="/images/icon_notion.png"
+              alt=""
+              width={16}
+              height={16}
+            ></Image>
+            Notion 공부 기록
+          </Link>
+        </div>
       </div>
     </section>
   );

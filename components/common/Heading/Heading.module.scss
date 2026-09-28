@@ -1,22 +1,13 @@
 .heading {
-  &__ttl {
-    margin-bottom: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(var(--text-xl) * var(--font-scale));
-    font-weight: 600;
-    &--small {
-      margin-bottom: 25px;
-      font-size: calc(var(--text-lg) * var(--font-scale));
-      justify-content: flex-start;
-    }
+  &__badge {
+    font-size: calc(var(--text-xs) * var(--font-scale));
+    color: var(--blue-color);
   }
-  &__img {
-    width: 18px;
-    margin-right: 5px;
-    img {
-      width: 100%;
+  &__ttl {
+    font-weight: 800;
+    font-size: calc(var(--text-xxl) * var(--font-scale));
+    &--center {
+      text-align: center;
     }
   }
 }

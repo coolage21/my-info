@@ -10,8 +10,8 @@
     margin-right: 2%;
     width: 49%;
     margin-bottom: 10px;
-    background-color: var(--lightgray-color);
-    border: 1px solid var(--silver-color);
+    // background-color: var(--lightgray-color);
+    // border: 1px solid var(--border-color);
     padding: 25px;
     border-radius: 10px;
   }
@@ -21,7 +21,7 @@
     font-size: calc(var(--text-lg) * var(--font-scale));
   }
   &__desc {
-    color: var(--gray-color);
+    // color: var(--gray-color);
   }
 }
 

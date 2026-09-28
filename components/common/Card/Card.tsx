@@ -27,13 +27,21 @@ export default function Card({
     <span className={cx("card", `card--${size}`)}>
       {img && (
         <span className={cx("card__img-wrapper")}>
-          <Image src={img} alt={imgAlt} width={351} height={200} quality={100}/>
+          <Image
+            src={img}
+            alt={imgAlt}
+            width={351}
+            height={200}
+            quality={100}
+          />
         </span>
       )}
-      {title && <span className={cx("card__ttl")}>{title}</span>}
-      {desc && <span className={cx("card__desc")}>{desc}</span>}
-      {role && <span className={cx("card__role")}>{role}</span>}
-      {/* {badge && <p className="">{badge}</p>} */}
+      <span className={cx("card__desc")}>
+        {title && <span className={cx("card__ttl")}>{title}</span>}
+        {desc && <span className={cx("card__txt")}>{desc}</span>}
+        {role && <span className={cx("card__role")}>{role}</span>}
+        {/* {badge && <p className="">{badge}</p>} */}
+      </span>
     </span>
   );
 }

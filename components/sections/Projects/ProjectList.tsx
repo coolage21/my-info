@@ -42,9 +42,11 @@ export default function Tabs({ initialData }: TabProps) {
           type="button"
           onClick={() => setCheckedCategory("all")}
           aria-pressed={checkedCategory == "all"}
-          className={cx("tab__btn", { active: checkedCategory === "all" })}
+          className={cx("tab__btn", {
+            active: checkedCategory === "all",
+          })}
         >
-          전체
+          전체 프로젝트
         </button>
         {category.map((category) => (
           <button
@@ -52,7 +54,9 @@ export default function Tabs({ initialData }: TabProps) {
             type="button"
             onClick={() => setCheckedCategory(category)}
             aria-pressed={checkedCategory === category}
-            className={cx("tab__btn", { active: checkedCategory === category })}
+            className={cx("tab__btn", {
+              active: checkedCategory === category,
+            })}
           >
             {category == "project" ? "프로젝트" : "사이드 프로젝트"}
           </button>
@@ -60,9 +64,9 @@ export default function Tabs({ initialData }: TabProps) {
       </div>
       {/* {isPending &&  <div>로딩중...
         </div>} */}
-      <ul className={cx("project__lists")}>
+      <ul className={cx("grid__wrapper", "project__lists")}>
         {curProjects.map((data: Project) => (
-          <li className={cx("project__list")} key={data.id}>
+          <li className={cx("grid", "project__list")} key={data.id}>
             <button
               ref={data.id === currentId ? listBtnRef : null}
               type="button"

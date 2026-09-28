@@ -33,7 +33,7 @@ export default function Header() {
             />
           </a>
         </h1>
-        <button onClick={scrollCheck} className={cx("btn", "toggle-btn")}>
+        <button onClick={scrollCheck} className={cx("toggle-btn")}>
           <i className="sc-only">모바일 토글메뉴</i>
           <span></span>
           <span></span>
@@ -42,19 +42,24 @@ export default function Header() {
         <nav className={cx("gnb")}>
           <ul className={cx("gnb__inner")}>
             <li className={cx("gnb__list")}>
-              <a href="#strength" onClick={scrollCheck}>핵심역량</a>
+              <a href="#about" onClick={scrollCheck}>
+                이력사항
+              </a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#skills" onClick={scrollCheck}>기술스택</a>
+              <a href="#skills" onClick={scrollCheck}>
+                핵심 역량
+              </a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#history" onClick={scrollCheck}>이력사항</a>
+              <a href="#projects" onClick={scrollCheck}>
+                프로젝트
+              </a>
             </li>
             <li className={cx("gnb__list")}>
-              <a href="#projects" onClick={scrollCheck}>프로젝트</a>
-            </li>
-            <li className={cx("gnb__list")}>
-              <a href="#contact" onClick={scrollCheck}>컨택</a>
+              <a href="#contact" onClick={scrollCheck}>
+                컨택
+              </a>
             </li>
           </ul>
         </nav>

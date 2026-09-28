@@ -1,21 +1,20 @@
 .top-btn {
   position: fixed;
   bottom: 40px;
-  right:40px;
+  right: 40px;
   height: 40px;
   width: 40px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-30px);
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 5px;
   // border: 1px solid var(--text-color);
-  background-color: var(--darkblue-color);
-  color: var(--lightgray-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   &.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 }
-

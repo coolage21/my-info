@@ -22,8 +22,12 @@ export default async function Test() {
   }
 
   return (
-    <section id="projects" className={cx("projects", "ly-main", "ly-section")}>
-      <Heading title="대표 프로젝트" size="medium" />
+    <section id="projects" className={cx("project", "ly-main", "ly-section")}>
+      <Heading
+        title="프로젝트 및 사이드 프로젝트"
+        size="medium"
+        subTitle="PROJECT"
+      />
       <ProjectList initialData={data || []} />
     </section>
   );

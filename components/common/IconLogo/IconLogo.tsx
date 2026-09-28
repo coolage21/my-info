@@ -40,7 +40,7 @@ export default function IconLogo({
           height: "auto",
         }}
       />
-      <span className={cx("icon-tooltip")}>{imgAlt}</span>
+      <span className={cx("icon__txt")}>{imgAlt}</span>
     </span>
   );
 }

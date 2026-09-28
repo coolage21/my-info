@@ -1,58 +1,87 @@
 .contact {
-  &__inner {
-    padding: 50px;
-    background-color: var(--lightgray-color);
-    border: 1px solid var(--silver-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
+  background-color: var(--sub-bg-color);
+  border-top: 1px solid var(--border-color);
   &__message {
-    width: 40%;
-  }
-  &__txt {
-    font-weight: 500;
-    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    border-radius: var(--round-sm);
+    padding: var(--space-sm);
   }
 }
 .profile {
-  width: 40%;
-  &__main {
+  padding: var(--space-sm);
+  background-color: var(--box-color);
+  border-radius: var(--round-sm);
+  color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+  &::before {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 120.6px;
+    flex-grow: 0;
+    border-radius: 9999px;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    background-color: var(--blue-color);
+    z-index: 0;
+  }
+  > * {
+    z-index: 1;
+    position: relative;
+  }
+  &__inner {
     display: flex;
-    align-items: center;
     margin-bottom: 12px;
   }
+  &__img {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--round-sm);
+    border: 1px solid white;
+    margin-right: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__desc {
+    margin-bottom: 16px;
+  }
+  &__main {
+  }
   &__job {
-    color: var(--gray-color);
   }
   &__name {
-    font-weight: 600;
-    font-size: calc(var(--text-xxl) * var(--font-scale));
-    margin-right: 8px;
+    font-size: calc(var(--text-xl) * var(--font-scale));
   }
   &__conts {
-    margin-bottom: -7px;
+    padding: 15px 0;
+    border-top: 1px solid var(--bg-color);
+    border-bottom: 1px solid var(--bg-color);
+  }
+  &__btn {
+    &--wrapper {
+      display: flex;
+      margin-top: 16px;
+      gap: 10px;
+    }
   }
   &__cont {
     display: flex;
+    gap: 7px;
     align-items: center;
-    gap: 6px;
-    margin-bottom: 7px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .contact {
-    &__inner {
-      flex-direction: column;
-      padding: 25px;
-      > * {
-        width: 100%;
-      }
-    }
   }
   .profile {
-    margin-bottom: 30px;
   }
 }

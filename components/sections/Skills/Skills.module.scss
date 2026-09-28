@@ -1,27 +1,43 @@
 .skills {
-  text-align: center;
+  background-color: var(--sub-bg-color);
+  border-top: 1px solid var(--border-color);
   &__lists {
-    margin-bottom: -95px;
+    margin-top: var(--space-md);
   }
   &__list {
-    margin-bottom: 95px;
+    padding: var(--space-sm);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
+    border-radius: var(--round-sm);
+    border-top: 4px solid var(--blue-color);
   }
   &__ttl {
-    margin-bottom: 8px;
-    font-weight: 500;
     font-size: calc(var(--text-lg) * var(--font-scale));
+    margin-bottom: 12px;
   }
   &__txt {
-    margin-bottom: 18px;
-    color: var(--gray-color);
+    padding-left: 13px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--blue-color);
+    }
   }
   .icon {
-    padding: 10px;
-    border-radius: 5px;
     &__wrapper {
+      border-top: 1px solid var(--border-color);
+      margin-top: 16px;
+      padding-top: 16px;
       display: flex;
-      justify-content: center;
-      gap: 13px;
+      flex-wrap: wrap;
+      gap: 5px;
     }
   }
 }

@@ -1,0 +1,124 @@
+.about {
+  gap: 32px;
+  position: relative;
+  &__inner {
+    > em {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+  }
+  &__desc {
+    margin: 20px 0 32px 0;
+    font-size: calc(var(--text-md) * var(--font-scale));
+    p {
+      margin-bottom: 16px;
+    }
+  }
+}
+.history {
+  padding: var(--space-xs);
+  background-color: var(--sub-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--round-sm);
+  &__box {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: var(--round-sm);
+    margin-bottom: 16px;
+  }
+  &__box-inner {
+    display: flex;
+  }
+  &__left {
+    min-width: 200px;
+    display: inline-block;
+  }
+  &__company {
+    font-size: calc(var(--text-lg) * var(--font-scale));
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__date {
+    font-weight: 500;
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__list {
+    padding-left: 13px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--blue-color);
+    }
+  }
+}
+.experience {
+  position: sticky;
+  height: fit-content;
+  top: 100px;
+  padding: var(--space-xs);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  &__items {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  &__item {
+    width: calc(50% - 6px);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sub-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--round-sm);
+    padding: 18px;
+    font-size: calc(var(--text-xs) * var(--font-scale));
+
+    &:nth-child(4) {
+      b {
+        font-size: calc(var(--text-md) * var(--font-scale));
+
+        line-height: 1;
+      }
+    }
+  }
+  &__ttl {
+    font-size: calc(var(--text-xl) * var(--font-scale));
+
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    &__inner {
+      grid-column: span 12;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .history {
+    &__box {
+      flex-direction: column;
+    }
+    &__box-inner {
+      flex-direction: column;
+    }
+  }
+}

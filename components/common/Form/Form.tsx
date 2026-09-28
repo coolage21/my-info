@@ -59,36 +59,38 @@ export default function ContactForm() {
   return (
     <div>
       <form onSubmit={handleSubmit} className={cx("form")}>
-        <p className={cx("form__item")}>
-          <label htmlFor="name" className={cx("form__label")}>
-            이름<span className={cx("c-red")}>*</span>
-          </label>
-          <input
-            ref={nameRef}
-            className={cx("form__input")}
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="이름을 입력해주세요"
-          />
-        </p>
-        <p className={cx("form__item")}>
-          <label htmlFor="email" className={cx("form__label")}>
-            이메일<span className={cx("c-red")}>*</span>
-          </label>
-          <input
-            ref={emailRef}
-            className={cx("form__input")}
-            id="email"
-            value={email}
-            type="email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="이메일을 입력해주세요"
-          />
-        </p>
-        <p className={cx("form__item")}>
+        <div className={cx("form__items")}>
+          <p className={cx("form__item")}>
+            <label htmlFor="name" className={cx("form__label")}>
+              이름<span className={cx("c-red")}>*</span>
+            </label>
+            <input
+              ref={nameRef}
+              className={cx("form__input")}
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="이름을 입력해주세요"
+            />
+          </p>
+          <p className={cx("form__item")}>
+            <label htmlFor="email" className={cx("form__label")}>
+              이메일<span className={cx("c-red")}>*</span>
+            </label>
+            <input
+              ref={emailRef}
+              className={cx("form__input")}
+              id="email"
+              value={email}
+              type="email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="이메일을 입력해주세요"
+            />
+          </p>
+        </div>
+        <p className={cx("form__item", "form__message")}>
           <label htmlFor="message" className={cx("form__label")}>
             내용<span className={cx("c-red")}>*</span>
           </label>

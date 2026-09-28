@@ -21,6 +21,11 @@ body {
 }
 
 body {
+  font-family:
+    var(--font-pretendard),
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   line-height: 1.5; // 가독성 개선
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; // macOS 글꼴 렌더링 개선
@@ -43,10 +48,6 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
-  &:hover {
-    color: var(--darkblue-color);
-    text-decoration: underline;
-  }
 }
 
 button,
