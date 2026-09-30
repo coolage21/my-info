@@ -10,8 +10,8 @@
   transition: 0.3s;
   border-radius: 5px;
   // border: 1px solid var(--text-color);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
   &.active {
     transform: translateY(0);
     opacity: 1;
