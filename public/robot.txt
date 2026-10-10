@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hahye.com/sitemap.xml
