@@ -21,5 +21,9 @@
   }
 
   &__txt {
+    text-transform: capitalize;
+    &.uppercase {
+      text-transform: uppercase;
+    }
   }
 }

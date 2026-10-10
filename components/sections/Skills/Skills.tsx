@@ -47,13 +47,13 @@ export default function Skills() {
                 height={28}
               />
               <IconLogo
-                img={"/images/icons/icon_tailwind.png"}
+                img={"/images/icons/icon_tailwindCSS.png"}
                 imgAlt={"Tailwind CSS"}
                 width={37}
                 height={28}
               />
               <IconLogo
-                img={"/images/icons/icon_js.png"}
+                img={"/images/icons/icon_javascript.png"}
                 imgAlt={"Javascript"}
                 width={29}
                 height={29}

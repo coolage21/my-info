@@ -33,14 +33,21 @@ export default function IconLogo({
     >
       <img
         src={img}
-        alt={imgAlt}
+        alt={""}
         width={width}
         height={height}
         style={{
           height: "auto",
         }}
       />
-      <span className={cx("icon__txt")}>{imgAlt}</span>
+      <span
+        className={cx(
+          "icon__txt",
+          `${["css", "scss", "html"].includes(imgAlt) && "uppercase"}`,
+        )}
+      >
+        {imgAlt}
+      </span>
     </span>
   );
 }
