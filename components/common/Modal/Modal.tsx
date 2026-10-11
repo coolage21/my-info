@@ -121,7 +121,13 @@ export default function Modal({ projectId, onClose }: ModalProps) {
           <div className={cx("modal__inner")}>
             <h2 id="modal-title" className={cx("modal__ttl")}>
               <span className={cx("modal__logo")}>
-                <img src="/images/icon_logo.png" alt="" />
+                <Image
+                  src="/images/icon_logo.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  style={{ width: "100%", height: "auto" }}
+                />
               </span>
               {data.title}
             </h2>
@@ -190,7 +196,15 @@ export default function Modal({ projectId, onClose }: ModalProps) {
               {/* 이미지 리스트 맵핑 부분 */}
               <div className={cx("modal__img-wrapper")}>
                 {data.image_list?.map((img, index) => (
-                  <img key={index} src={img} alt={data.image_alt} />
+                  <Image
+                    key={index}
+                    src={img}
+                    alt={data.image_alt}
+                    width={0}
+                    height={0}
+                    sizes="(max-width: 748px) 90vw, 520px"
+                    style={{ width: "100%", height: "auto" }}
+                  />
                 ))}
               </div>
             </div>

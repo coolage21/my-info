@@ -32,7 +32,7 @@ export default function Card({
             alt={imgAlt}
             width={351}
             height={200}
-            quality={100}
+            sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 351px"
           />
         </span>
       )}

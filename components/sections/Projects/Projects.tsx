@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import classNames from "classnames/bind";
 import styles from "./Projects.module.scss";
 import ProjectList from "./ProjectList";
@@ -8,9 +9,16 @@ import { getProjectList } from "@/lib/queries/project";
 
 const cx = classNames.bind(styles);
 
+// Supabase 응답은 next의 fetch 캐시를 타지 않으므로 직접 캐싱 (1시간마다 재검증)
+const getCachedProjectList = unstable_cache(
+  async () => getProjectList(supabase),
+  ["project-list"],
+  { revalidate: 3600 },
+);
+
 export default async function Test() {
   // Server Component fetch
-  const { data: data, error } = await getProjectList(supabase);
+  const { data: data, error } = await getCachedProjectList();
 
   if (error) {
     console.error("조회 에러:", error.message);

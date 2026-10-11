@@ -1,13 +1,18 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { Category, Project } from "@/types/project";
 import classNames from "classnames/bind";
 import styles from "./ProjectList.module.scss";
-import Modal from "@/components/common/Modal/Modal";
 import Card from "@/components/common/Card/Card";
 
 const cx = classNames.bind(styles);
+
+// 카드 클릭 시에만 필요하므로 초기 JS 번들에서 분리
+const Modal = dynamic(() => import("@/components/common/Modal/Modal"), {
+  ssr: false,
+});
 
 // 리스트 형태면 뒤에 [] 추가
 interface TabProps {

@@ -30,6 +30,7 @@ export default function Header() {
               alt="codingage"
               width={268}
               height={46}
+              preload
             />
           </a>
         </h1>
