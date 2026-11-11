@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "코딩에이지 포트폴리오",
     images: [
       {
-        url: "https://hahye.com/images/screenshot/img_main2.png",
+        url: "https://hahye.com/images/screenshot/img_main.png",
         width: 1200,
         height: 630,
       },
