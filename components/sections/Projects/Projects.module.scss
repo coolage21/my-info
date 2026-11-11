@@ -26,6 +26,12 @@
 // }
 .project {
   position: relative;
+  &__skeleton {
+    width: 100%;
+    aspect-ratio: 351 / 330;
+    background-color: var(--border-color);
+    border-radius: var(--round-sm);
+  }
   &__list {
     > button {
       width: 100%;

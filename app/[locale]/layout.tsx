@@ -60,6 +60,11 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// 빌드 시점에 locale별(en/cn/ko) 페이지를 미리 정적 생성
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
 

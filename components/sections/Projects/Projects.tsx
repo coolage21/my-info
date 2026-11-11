@@ -1,9 +1,9 @@
+import { Suspense } from "react";
 import { unstable_cache } from "next/cache";
 import classNames from "classnames/bind";
 import styles from "./Projects.module.scss";
 import ProjectList from "./ProjectList";
 import Heading from "@/components/common/Heading/Heading";
-import { Project } from "@/types/project";
 import { supabase } from "@/lib/supabase/client";
 import { getProjectList } from "@/lib/queries/project";
 
@@ -16,19 +16,8 @@ const getCachedProjectList = unstable_cache(
   { revalidate: 3600 },
 );
 
-export default async function Test() {
-  // Server Component fetch
-  const { data: data, error } = await getCachedProjectList();
-
-  if (error) {
-    console.error("조회 에러:", error.message);
-    return (
-      <div>
-        프로젝트를 찾을 수 없습니다<div className=""></div>
-      </div>
-    );
-  }
-
+// Heading은 데이터와 무관하므로 즉시 렌더링하고, 조회가 필요한 부분만 스트리밍 대상으로 분리
+export default function Projects() {
   return (
     <section id="projects" className={cx("project", "ly-main", "ly-section")}>
       <Heading
@@ -36,7 +25,33 @@ export default async function Test() {
         size="medium"
         subTitle="PROJECT"
       />
-      <ProjectList initialData={data || []} />
+      <Suspense fallback={<ProjectsSkeleton />}>
+        <ProjectsData />
+      </Suspense>
     </section>
+  );
+}
+
+async function ProjectsData() {
+  // Server Component fetch
+  const { data, error } = await getCachedProjectList();
+
+  if (error) {
+    console.error("조회 에러:", error.message);
+    return <div>프로젝트를 찾을 수 없습니다</div>;
+  }
+
+  return <ProjectList initialData={data || []} />;
+}
+
+function ProjectsSkeleton() {
+  return (
+    <ul className={cx("project__lists")} aria-hidden="true">
+      {Array.from({ length: 6 }).map((_, i) => (
+        <li key={i} className={cx("project__list")}>
+          <div className={cx("project__skeleton")} />
+        </li>
+      ))}
+    </ul>
   );
 }

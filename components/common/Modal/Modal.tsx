@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react"; // useState 추가
+import { useEffect, useRef } from "react";
+import { useQuery } from "@tanstack/react-query";
 import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
 import { Project } from "@/types/project";
@@ -18,25 +19,19 @@ interface ModalProps {
 export default function Modal({ projectId, onClose }: ModalProps) {
   const btnRef = useRef<HTMLButtonElement>(null);
 
-  const [data, setData] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  // React Query: 같은 프로젝트를 다시 열면 캐시에서 즉시 반환, 중복 요청 방지
+  const { data = null, isLoading } = useQuery<Project>({
+    queryKey: ["project", projectId],
+    queryFn: async () => {
+      const { data, error } = await getProjectById(supabase, projectId);
+      if (error) throw error;
+      return data as Project;
+    },
+    staleTime: 5 * 60 * 1000,
+  });
 
   useEffect(() => {
-    if (!projectId) return;
-    // useEffect fetch
-    const fetchProject = async () => {
-      setIsLoading(true);
-      const { data, error } = await getProjectById(supabase, projectId);
-
-      if (error) {
-        console.error("조회 에러:", error.message);
-      } else {
-        setData(data);
-      }
-      setIsLoading(false);
-    };
-    fetchProject();
-
+    // 조회수 증가는 캐싱 대상이 아니라 열 때마다 호출
     fetch("/api/project/view", {
       method: "POST",
       headers: {
