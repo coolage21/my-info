@@ -24,7 +24,7 @@ export default function Contact() {
             </div>
             <div className={cx("profile__main")}>
               <p className={cx("profile__badge ", "badge", "badge--orange")}>
-                FRONTEND DEVELOPER
+                WEB PUBLISHER
               </p>
               <h4 className={cx("profile__name")}>최하혜</h4>
             </div>

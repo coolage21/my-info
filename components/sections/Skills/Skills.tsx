@@ -12,7 +12,7 @@ export default function Skills() {
         <Heading title="핵심 역량" subTitle="SKILL" position="center" />
         <ul className={cx("skills__lists", "grid__wrapper")}>
           <li className={cx("skills__list", "grid")}>
-            <h3 className={cx("skills__ttl")}>프론트엔드 기술</h3>
+            <h3 className={cx("skills__ttl")}>웹 퍼블리싱 </h3>
             <ul>
               <li className={cx("skills__txt")}>
                 SCSS, Tailwind CSS 적용 경험

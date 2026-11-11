@@ -14,8 +14,7 @@ export default function About() {
         <em className={cx("badge")}>ABOUT</em>
         <h2 className={cx("heading")}>
           탄탄한 구조 위에 완성도를 쌓아가는,
-          <br />
-          프론트엔드 개발자
+          <br />웹 퍼블리셔
         </h2>
         <div className={cx("about__desc")}>
           <p>
@@ -28,13 +27,9 @@ export default function About() {
             프로젝트 진행 과정에서 프론트엔드 개발 영역까지 업무를 경험할 기회가
             있었습니다. 일부 페이지의 데이터 매핑과 상태 관리 업무에 투입되어
             화면과 기능이 연결되는 과정을 직접 경험했고 이를 계기로 웹 개발
-            전반에 관심을 가지게 되었습니다.
-          </p>
-          <p>
-            현재는 화면을 그대로 구현하는 것을 넘어 웹 개발로 영역을 확장하여
-            프론트엔드 개발 역량을 키우고 있습니다. 퍼블리싱 작업에서 쌓은 UI에
-            대한 이해를 바탕으로 기능을 적용하는 것에 더하여 웹 최적화와 사용자
-            경험을 고려하는 프론트엔드 개발자를 목표로 합니다.
+            전반에 관심을 가지게 되었습니다. 퍼블리싱 작업에서 쌓은 지식을
+            바탕으로 기능을 적용하는 것에 더하여 웹 최적화와 사용자 경험을
+            고려하는 UI/UX 개발자를 목표로 합니다.
           </p>
         </div>
         <History></History>
@@ -176,10 +171,8 @@ export function Experience() {
           <span>Vue.js 프로젝트 경험</span>
         </li>
         <li className={cx("experience__item")}>
-          <b className={cx("experience__ttl", "text-16")}>
-            PUBLISHER → FRONTEND
-          </b>
-          <span>프론트엔드 역량 확장</span>
+          <b className={cx("experience__ttl", "text-16")}>PUBLISHER → UI/UX</b>
+          <span>UI/UX 개발 역량 확장</span>
         </li>
       </ul>
     </div>

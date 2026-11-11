@@ -31,12 +31,13 @@ export default function Introduction() {
       <div className={cx("introduction__inner")}>
         <div className={cx("introduction__badge")}>
           <span>WELCOME</span>
-          I’M CODINGAGE, FRONTEND DEVELOPER
+          I’M CODINGAGE, WEB PUBLISHER
         </div>
         <h1 className={cx("introduction__ttl")}>
           안녕하세요
+          <br />
           <span className={cx("introduction__ttl-inner")}>
-            프론트엔드 개발자 <br className={cx("m-block")} /> 최하혜입니다.
+            웹 퍼블리셔 <br className={cx("m-block")} /> 최하혜입니다.
           </span>
         </h1>
         <div className={cx("introduction__about")}>
